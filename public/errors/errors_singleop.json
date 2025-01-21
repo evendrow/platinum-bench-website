@@ -1,0 +1,76 @@
+{
+  "meta-llama/Meta-Llama-3.1-405B-Instruct": [],
+  "claude-3-5-sonnet": [],
+  "o1-mini": [
+    {
+      "prompt": "Solve the following math word problem.\n\nThere are 55 oranges in a box. Deborah has 11 oranges in a bag. Susan takes 35 oranges out of the box. How many oranges are left in the box?\n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "20"
+      ],
+      "prediction": "9",
+      "explanation": "Answer: 9"
+    }
+  ],
+  "gpt-4o-2024-11-20": [],
+  "gpt-4o-2024-08-06": [],
+  "gemini-1.5-pro": [],
+  "mistral-large": [],
+  "meta-llama/Meta-Llama-3.1-70B-Instruct": [
+    {
+      "prompt": "Solve the following math word problem.\n\nShirley sold 20 boxes of Do-Si-Dos. How many cases of 4 boxes, plus extra boxes does Shirley need to deliver?\n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "5"
+      ],
+      "prediction": "20",
+      "explanation": "To solve this problem, we need to divide the total number of boxes (20) by the number of boxes per case (4) to find out how many cases Shirley needs, and then add any extra boxes that don't fit into a full case.\n\n20 boxes \u00f7 4 boxes per case = 5 cases\n\nSince 5 cases would be 5 x 4 = 20 boxes, and Shirley has exactly 20 boxes, there are no extra boxes.\n\nSo, Shirley needs 5 cases with no extra boxes. To represent this as a single number, we can multiply the number of cases by 4 (since each case has 4 boxes) and add the number of extra boxes (which is 0 in this case).\n\n5 cases x 4 boxes per case = 20 boxes\n+ 0 extra boxes = 20 boxes\n\nAnswer: 20"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\n Molly had 14 candles on her birthday cake. She grew older and got 6 more on her birthday cake. How old is Molly now?\n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "20"
+      ],
+      "prediction": "15",
+      "explanation": "Let's think step-by-step.\n\nInitially, Molly had 14 candles on her birthday cake. This means she was 14 years old.\n\nThen, she got 6 more candles on her birthday cake. This means she had another birthday and is now 14 + 1 = 15 years old, and the 6 candles represent the 6 years that have passed since she was 14, but that's not correct. The 6 candles represent the fact that she had another birthday, so she is now 1 year older than 14, and the 6 candles are in addition to the 14 candles she already had, but that's not what the question is asking.\n\nThe correct interpretation is that the 6 candles represent the number of years that have passed since she was 14, but that's not correct. The correct interpretation is that Molly is now 14 + 1 = 15 years old, and the 6 candles are in addition to the 14 candles she already had, but that's not what the question is asking.\n\nThe correct interpretation is that Molly had 14 candles on her birthday cake initially, and then she had another birthday and got 6 more candles. This means she is now 14 + 1 = 15 years old, and the 6 candles are in addition to the 14 candles she already had, but that's not what the question is asking.\n\nThe correct interpretation is that Molly had 14 candles on her birthday cake initially, and then she had another birthday and got 6 more candles. This means she is now 14 + 1 = 15 years old.\n\nAnswer: 15"
+    }
+  ],
+  "gpt-4o-mini": [],
+  "gemini-1.5-flash": [],
+  "mistral-small": [
+    {
+      "prompt": "Solve the following math word problem.\n\nDiane has 37 crayons. She gets 5 more from Frances. Later, Diane buys 16 cards at the store. How many crayons does Diane have in all?\n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "42"
+      ],
+      "prediction": "58",
+      "explanation": "Let's break down the problem step-by-step:\n\n1. Diane starts with 37 crayons.\n2. She gets 5 more crayons from Frances, so now she has 37 + 5 = 42 crayons.\n3. Later, Diane buys 16 more crayons at the store, so she has 42 + 16 = 58 crayons.\n\nTherefore, Diane has a total of 58 crayons.\n\nAnswer: 58"
+    }
+  ],
+  "o1-preview-2024-09-12": [],
+  "meta-llama/Llama-3.3-70B-Instruct": [],
+  "grok-2-1212": [
+    {
+      "prompt": "Solve the following math word problem.\n\nShirley sold 20 boxes of Do-Si-Dos. How many cases of 4 boxes, plus extra boxes does Shirley need to deliver?\n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "5"
+      ],
+      "prediction": "50",
+      "explanation": "To solve this problem, we need to determine how many full cases of 4 boxes Shirley can make from the 20 boxes she sold, and how many extra boxes will be left over.\n\nStep 1: Calculate the number of full cases.\n20 boxes \u00f7 4 boxes per case = 5 cases\n\nStep 2: Calculate the number of extra boxes.\n20 boxes - (5 cases \u00d7 4 boxes per case) = 20 boxes - 20 boxes = 0 extra boxes\n\nSo, Shirley needs to deliver 5 full cases and 0 extra boxes.\n\nAnswer: 50"
+    }
+  ],
+  "claude-3-5-sonnet-20241022": [],
+  "claude-3-5-haiku": [],
+  "gemini-2.0-flash": [],
+  "gemini-2.0-flash-thinking": [],
+  "deepseek/deepseek-chat": [
+    {
+      "prompt": "Solve the following math word problem.\n\nDiane has 37 crayons. She gets 5 more from Frances. Later, Diane buys 16 cards at the store. How many crayons does Diane have in all?\n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "42"
+      ],
+      "prediction": "58",
+      "explanation": "Let's solve the problem step-by-step.\n\n1. **Initial number of crayons Diane has:**  \n   Diane starts with 37 crayons.\n\n2. **Crayons received from Frances:**  \n   Diane gets 5 more crayons from Frances.  \n   Total crayons now: \\( 37 + 5 = 42 \\).\n\n3. **Crayons bought at the store:**  \n   Diane buys 16 crayons at the store.  \n   Total crayons now: \\( 42 + 16 = 58 \\).\n\n4. **Final number of crayons Diane has:**  \n   Diane has 58 crayons in total.\n\nAnswer: 58"
+    }
+  ],
+  "Qwen/Qwen2.5-72B-Instruct": [],
+  "o1-2024-12-17-high": []
+}

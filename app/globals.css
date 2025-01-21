@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Newsreader';
+        font-style: normal;
+        font-weight: 300;
+        src: url('/fonts/Newsreader_24pt-Light.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Newsreader';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/fonts/Newsreader_24pt-Regular.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Newsreader';
+        font-style: normal;
+        font-weight: 500;
+        src: url('/fonts/Newsreader_24pt-Medium.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'Newsreader';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/fonts/Newsreader_24pt-Bold.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'PTSerif';
+        font-style: normal;
+        font-weight: 300;
+        src: url('/fonts/PTSerif-Light.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'PTSerif';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/fonts/PTSerif-Regular.ttf') format('truetype');
+    }
+    @font-face {
+        font-family: 'PTSerif';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/fonts/PTSerif-Bold.ttf') format('truetype');
+    }
+}
+

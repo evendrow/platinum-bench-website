@@ -1,0 +1,77 @@
+{
+  "meta-llama/Meta-Llama-3.1-405B-Instruct": [],
+  "claude-3-5-sonnet": [],
+  "o1-mini": [
+    {
+      "prompt": "Solve the following math word problem.\n\n There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total? \n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "30"
+      ],
+      "prediction": "25",
+      "explanation": "Answer: 25"
+    }
+  ],
+  "gpt-4o-2024-11-20": [],
+  "gpt-4o-2024-08-06": [],
+  "gemini-1.5-pro": [
+    {
+      "prompt": "Solve the following math word problem.\n\n There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total? \n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "30"
+      ],
+      "prediction": "25",
+      "explanation": "* **Players who quit:** 5\n* **Lives per player:** 5\n* **Total lives lost:** 5 players * 5 lives/player = 25 lives\n\nAnswer: 25\n"
+    }
+  ],
+  "mistral-large": [],
+  "meta-llama/Meta-Llama-3.1-70B-Instruct": [],
+  "gpt-4o-mini": [
+    {
+      "prompt": "Solve the following math word problem.\n\n Kaleb bought 14 boxes of chocolate candy and gave 5 to his little brother. If each box has 6 pieces inside it, how many pieces did Kaleb still have? \n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "54"
+      ],
+      "prediction": "79",
+      "explanation": "First, we need to find out how many pieces of chocolate candy Kaleb bought in total. \n\n1. **Calculate the total number of pieces in all boxes:**\n   Kaleb bought 14 boxes, and each box has 6 pieces. So, we multiply the number of boxes by the number of pieces per box:\n   \\[\n   14 \\text{ boxes} \\times 6 \\text{ pieces/box} = 84 \\text{ pieces}\n   \\]\n\n2. **Calculate how many pieces Kaleb gave to his little brother:**\n   Kaleb gave away 5 pieces to his brother.\n\n3. **Calculate how many pieces Kaleb has left:**\n   We subtract the pieces given away from the total pieces he initially had:\n   \\[\n   84 \\text{ pieces} - 5 \\text{ pieces} = 79 \\text{ pieces}\n   \\]\n\nThus, the number of pieces Kaleb still has is 79.\n\nFinal answer: Answer: 79"
+    }
+  ],
+  "gemini-1.5-flash": [],
+  "mistral-small": [],
+  "o1-preview-2024-09-12": [],
+  "meta-llama/Llama-3.3-70B-Instruct": [],
+  "grok-2-1212": [],
+  "claude-3-5-sonnet-20241022": [],
+  "claude-3-5-haiku": [
+    {
+      "prompt": "Solve the following math word problem.\n\n There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total? \n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "30"
+      ],
+      "prediction": "25",
+      "explanation": "Let's solve this step by step:\n\n1. First, we know that 5 players quit the game\n2. Each player who quit had 5 lives\n3. To find the total number of lives, we multiply the number of players who quit by the number of lives each player had\n4. 5 players \u00d7 5 lives per player = 25 total lives\n\nAnswer: 25"
+    }
+  ],
+  "gemini-2.0-flash": [
+    {
+      "prompt": "Solve the following math word problem.\n\n There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total? \n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "30"
+      ],
+      "prediction": "25",
+      "explanation": "First, find the number of players who quit: 5 players quit.\nSecond, find the number of lives each player had: each player had 5 lives.\nThird, multiply the number of players who quit by the number of lives each had to find the total number of lives: 5 players * 5 lives/player = 25 lives.\nAnswer: 25\n"
+    }
+  ],
+  "gemini-2.0-flash-thinking": [
+    {
+      "prompt": "Solve the following math word problem.\n\n There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total? \n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "30"
+      ],
+      "prediction": "25",
+      "explanation": "The problem has two parts.\nPart 1: Find the number of players who quit. This is directly given in the problem.\nPart 2: Calculate the total number of lives those players had. This requires multiplying the number of players who quit by the number of lives each player had.\n\nNumber of friends initially playing = 11\nNumber of players who quit = 5\nNumber of lives each player had = 5\n\nThe question asks for the total number of lives the players who left had.\n\nNumber of players who left = 5\nNumber of lives per player = 5\n\nTotal lives = (Number of players who left) * (Number of lives per player)\nTotal lives = 5 * 5\nTotal lives = 25\n\nThe final answer should be in the format \"Answer: XXX\".\nAnswer: 25Answer: 25"
+    }
+  ],
+  "deepseek/deepseek-chat": [],
+  "Qwen/Qwen2.5-72B-Instruct": [],
+  "o1-2024-12-17-high": []
+}

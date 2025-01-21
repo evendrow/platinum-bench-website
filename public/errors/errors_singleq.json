@@ -1,0 +1,41 @@
+{
+  "meta-llama/Meta-Llama-3.1-405B-Instruct": [],
+  "claude-3-5-sonnet": [],
+  "o1-mini": [],
+  "gpt-4o-2024-11-20": [],
+  "gpt-4o-2024-08-06": [],
+  "gemini-1.5-pro": [],
+  "mistral-large": [],
+  "meta-llama/Meta-Llama-3.1-70B-Instruct": [],
+  "gpt-4o-mini": [
+    {
+      "prompt": "Solve the following math word problem.\n\nCarla has some marbles. Carla bought 489 marbles. Now Calra has 2778 marbles all together. How many did Carla start with?\n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "2289"
+      ],
+      "prediction": "2278",
+      "explanation": "To find out how many marbles Carla started with, we can set up the equation based on the information given in the problem.\n\n1. Let \\( x \\) be the number of marbles Carla started with.\n2. According to the problem, Carla bought 489 marbles.\n3. After buying the marbles, Carla has a total of 2778 marbles.\n\nWe can write the equation as follows:\n\n\\[\nx + 489 = 2778\n\\]\n\n4. To find \\( x \\), we need to isolate it on one side of the equation. We can do this by subtracting 489 from both sides:\n\n\\[\nx = 2778 - 489\n\\]\n\n5. Now, we perform the subtraction:\n\n\\[\nx = 2278\n\\]\n\nThus, Carla started with 2278 marbles.\n\nFinal answer: Answer: 2278"
+    }
+  ],
+  "gemini-1.5-flash": [
+    {
+      "prompt": "Solve the following math word problem.\n\nChristian and the junior ranger brought a bag of 140 nails as they visited every station assigned to the junior ranger. If they left exactly 7 nails in every station they visited, how many stations did Joline and the junior ranger visit?\n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "20"
+      ],
+      "prediction": "19",
+      "explanation": "Step 1: Find the number of nails used per station.  They left 7 nails, meaning they used 140 - 7 = 133 nails.\n\nStep 2: Find the number of stations visited. They used 133 nails total, and used 7 nails per station, so they visited 133 / 7 = 19 stations.\n\nAnswer: 19\n"
+    }
+  ],
+  "mistral-small": [],
+  "o1-preview-2024-09-12": [],
+  "meta-llama/Llama-3.3-70B-Instruct": [],
+  "grok-2-1212": [],
+  "claude-3-5-sonnet-20241022": [],
+  "claude-3-5-haiku": [],
+  "gemini-2.0-flash": [],
+  "gemini-2.0-flash-thinking": [],
+  "deepseek/deepseek-chat": [],
+  "Qwen/Qwen2.5-72B-Instruct": [],
+  "o1-2024-12-17-high": []
+}
