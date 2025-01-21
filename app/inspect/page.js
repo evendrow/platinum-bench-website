@@ -2,7 +2,7 @@
 
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import * as Icons from "react-bootstrap-icons";
 import { results, model_name_to_key } from '../results';
 import { Nav } from '@/components/nav';
@@ -171,160 +171,162 @@ export default function InspectPage() {
     return (
       <main className="flex flex-col items-center h-screen text-left bg-slate-50 min-w-[800px]">
         <Nav active="inspect" />
-        <div className="grow flex flex-row w-full overflow-hidden max-w-[1200px] pt-4">
-          <div className="w-72 lg:w-96 shrink-0 h-full overflow-scroll border-r-none border-slate-300 pe-2">
-            <h1 className="text-lg text-left px-7 pt-6 h-16 font-medium">
-              Datasets
-            </h1>
-            <div>
-              {metadata.map((item, index) => (
-                <div
-                  key={index}
-                  className="border-none border-slate-200 first:border-t"
-                >
-                  <a
-                    href={`/inspect?model=${model}&dataset=${item.key}`}
-                    className={
-                      `block mx-4 my-1 px-3 py-2 hover:bg-slate-200 text-slate-600 hover:text-slate-900 rounded-lg ` +
-                      (item.key == dataset && "bg-slate-200 text-slate-900")
-                    }
-                  >
-                    <div className="flex flex-row items-center">
-                      <div className="grow pe-2">
-                        <div className="font-medium text-sm">
-                          {item.name}
-                          <DatasetTypeBadge className="inline-block ms-2">
-                            {item.type_long || item.type}
-                          </DatasetTypeBadge>
-                        </div>
-                        <div className="font-medium text-xs text-slate-500">
-                          {item.description}
-                        </div>
-                      </div>
-                      <Icons.ChevronRight className="inline-block shrink-0 float-right w-3 h-3" />
-                    </div>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="h-full grow flex flex-col">
-            <div className="shrink-0 border-b border-slate-300 px-6 py-6">
-              {/* <h1 className="text-3xl mb-6 text-left font-serif">Error Viewer</h1> */}
-              <h1 className="text-xl mb-6 text-left font-medium">
-                Showing errors on <b className="text-blue-600">{dataset}</b>{" "}
-                from <b className="text-blue-600">{model}</b>
+        <Suspense fallback={<div className='mt-8 text-lg'>Loading...</div>}>
+          <div className="grow flex flex-row w-full overflow-hidden max-w-[1200px] pt-4">
+            <div className="w-72 lg:w-96 shrink-0 h-full overflow-scroll border-r-none border-slate-300 pe-2">
+              <h1 className="text-lg text-left px-7 pt-6 h-16 font-medium">
+                Datasets
               </h1>
-              <div className="text-md">Pick a model to view errors for:</div>
-              <div className="mt-0">
-                {model_names.map((model_name, index) => (
-                  <div key={index}
-                    className={
-                      `inline-block px-0.5 py-0 h-7 rounded-lg  mx-1 mt-2 text-sm ` +
-                      (model_name == model
-                        ? `bg-slate-700 text-white border border-slate-700 hover:bg-slate-600`
-                        : `border border-slate-600 hover:bg-slate-200` +
-                            (data[model_name]?.length 
-                            ? " bg-transparent text-slate-700 " 
-                            : " bg-slate-200 text-slate-500")
-                        )
-                    }
+              <div>
+                {metadata.map((item, index) => (
+                  <div
+                    key={index}
+                    className="border-none border-slate-200 first:border-t"
                   >
                     <a
-                      href={`/inspect?model=${model_name}&dataset=${dataset}`}
-                      className={"inline-block px-2 py-0.5 "
+                      href={`/inspect?model=${model}&dataset=${item.key}`}
+                      className={
+                        `block mx-4 my-1 px-3 py-2 hover:bg-slate-200 text-slate-600 hover:text-slate-900 rounded-lg ` +
+                        (item.key == dataset && "bg-slate-200 text-slate-900")
                       }
                     >
-                      {key_to_model_name[model_name]}
-                      {/* number of errors */}
-                      {data[model_name]?.length ? (
-                        <div
-                          className={
-                            "inline-flex items-center justify-center ms-2 px-1 text-xs rounded-full h-5 min-w-5 " +
-                            (model_name == model
-                              ? "bg-white text-slate-700"
-                              : "bg-slate-700 text-white")
-                          }
-                        >
-                          {data[model_name]?.length}
+                      <div className="flex flex-row items-center">
+                        <div className="grow pe-2">
+                          <div className="font-medium text-sm">
+                            {item.name}
+                            <DatasetTypeBadge className="inline-block ms-2">
+                              {item.type_long || item.type}
+                            </DatasetTypeBadge>
+                          </div>
+                          <div className="font-medium text-xs text-slate-500">
+                            {item.description}
+                          </div>
                         </div>
-                      ) : (
-                        ``
-                      )}
+                        <Icons.ChevronRight className="inline-block shrink-0 float-right w-3 h-3" />
+                      </div>
                     </a>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="grow w-full px-8 py-6 overflow-y-scroll">
-              {data[model]?.length == 0 && (
-                <div className="text-center text-lg text-slate-600">
-                  No errors made by <b>{key_to_model_name[model]}</b> on <b>{datasetNamePretty}</b>
-                </div>
-              )}
-              {data[model]?.map((error, index) => {
-                // const prediction = question['predictions'].filter(pred => pred['model_name'] == model)[0];
-                // if (!prediction) return null;
-                // const solution = question['user_answer'] != undefined ? question['user_answer'] : question['answer'];
-                // const is_bad_question = question['is_bad_question'] != undefined ? question['is_bad_question'] : false;
-                // if (prediction['prediction'] == solution || is_bad_question) return null;
-                const question = error["prompt"];
-                const prediction = error["prediction"];
-                const solution = error["platinum_target"].join("; ");
-
-                return (
-                  <div
-                    key={index}
-                    className="bg-white rounded-lg py-4 px-4 mb-4 border border-slate-300"
-                  >
-                    <div className="flex flex-row mb-4">
-                      <div className="w-20 text-sm shrink-0 font-bold text-slate-600 mt-1">
-                        Question
-                      </div>
-                      <div className="grow text-left bg-slate-100 px-3 py-2 rounded-lg whitespace-pre-wrap text-sm">
-                        {question}
-                      </div>
-                    </div>
-                    <div className="flex flex-row flex-wrap items-center justify-start">
-                      <div className="flex flex-row flex-wrap items-center">
-                        <div className="w-20 text-sm shrink-0 font-bold text-slate-600">
-                          Solution
-                        </div>
-                        <div className="text-left text-md bg-slate-100 px-3 py-2 rounded-lg font-bold">
-                          {solution}
-                        </div>
-                        <div className="ms-5 text-sm shrink-0 font-bold text-slate-600 me-2">
-                          Prediction by {key_to_model_name[model]}
-                        </div>
-                        <div className="text-left text-md bg-red-100 px-3 py-2 rounded-lg font-bold">
-                          {prediction}
-                        </div>
-                      </div>
-                      <button
-                        onClick={() =>
-                          setIsExpanded(index, !error["is_expanded"])
+            <div className="h-full grow flex flex-col">
+              <div className="shrink-0 border-b border-slate-300 px-6 py-6">
+                {/* <h1 className="text-3xl mb-6 text-left font-serif">Error Viewer</h1> */}
+                <h1 className="text-xl mb-6 text-left font-medium">
+                  Showing errors on <b className="text-blue-600">{dataset}</b>{" "}
+                  from <b className="text-blue-600">{model}</b>
+                </h1>
+                <div className="text-md">Pick a model to view errors for:</div>
+                <div className="mt-0">
+                  {model_names.map((model_name, index) => (
+                    <div key={index}
+                      className={
+                        `inline-block px-0.5 py-0 h-7 rounded-lg  mx-1 mt-2 text-sm ` +
+                        (model_name == model
+                          ? `bg-slate-700 text-white border border-slate-700 hover:bg-slate-600`
+                          : `border border-slate-600 hover:bg-slate-200` +
+                              (data[model_name]?.length 
+                              ? " bg-transparent text-slate-700 " 
+                              : " bg-slate-200 text-slate-500")
+                          )
+                      }
+                    >
+                      <a
+                        href={`/inspect?model=${model_name}&dataset=${dataset}`}
+                        className={"inline-block px-2 py-0.5 "
                         }
-                        className="ms-8 inline-block text-slate-700 border border-slate-600 px-4 py-2 rounded-lg hover:bg-slate-300 text-sm underline"
                       >
-                        {error["is_expanded"] ? "Hide" : "Show"} output
-                      </button>
+                        {key_to_model_name[model_name]}
+                        {/* number of errors */}
+                        {data[model_name]?.length ? (
+                          <div
+                            className={
+                              "inline-flex items-center justify-center ms-2 px-1 text-xs rounded-full h-5 min-w-5 " +
+                              (model_name == model
+                                ? "bg-white text-slate-700"
+                                : "bg-slate-700 text-white")
+                            }
+                          >
+                            {data[model_name]?.length}
+                          </div>
+                        ) : (
+                          ``
+                        )}
+                      </a>
                     </div>
-                    {error["is_expanded"] && (
-                      <div className="mt-4 flex flex-row">
-                        <div className="w-20 text-sm shrink-0 font-bold text-slate-600">
-                          Output
+                  ))}
+                </div>
+              </div>
+              <div className="grow w-full px-8 py-6 overflow-y-scroll">
+                {data[model]?.length == 0 && (
+                  <div className="text-center text-lg text-slate-600">
+                    No errors made by <b>{key_to_model_name[model]}</b> on <b>{datasetNamePretty}</b>
+                  </div>
+                )}
+                {data[model]?.map((error, index) => {
+                  // const prediction = question['predictions'].filter(pred => pred['model_name'] == model)[0];
+                  // if (!prediction) return null;
+                  // const solution = question['user_answer'] != undefined ? question['user_answer'] : question['answer'];
+                  // const is_bad_question = question['is_bad_question'] != undefined ? question['is_bad_question'] : false;
+                  // if (prediction['prediction'] == solution || is_bad_question) return null;
+                  const question = error["prompt"];
+                  const prediction = error["prediction"];
+                  const solution = error["platinum_target"].join("; ");
+
+                  return (
+                    <div
+                      key={index}
+                      className="bg-white rounded-lg py-4 px-4 mb-4 border border-slate-300"
+                    >
+                      <div className="flex flex-row mb-4">
+                        <div className="w-20 text-sm shrink-0 font-bold text-slate-600 mt-1">
+                          Question
                         </div>
-                        <div className="grow border border-slate-400 px-3 py-2 rounded-lg whitespace-pre-wrap text-xs font-mono">
-                          {error["explanation"]}
+                        <div className="grow text-left bg-slate-100 px-3 py-2 rounded-lg whitespace-pre-wrap text-sm">
+                          {question}
                         </div>
                       </div>
-                    )}
-                  </div>
-                );
-              })}
+                      <div className="flex flex-row flex-wrap items-center justify-start">
+                        <div className="flex flex-row flex-wrap items-center">
+                          <div className="w-20 text-sm shrink-0 font-bold text-slate-600">
+                            Solution
+                          </div>
+                          <div className="text-left text-md bg-slate-100 px-3 py-2 rounded-lg font-bold">
+                            {solution}
+                          </div>
+                          <div className="ms-5 text-sm shrink-0 font-bold text-slate-600 me-2">
+                            Prediction by {key_to_model_name[model]}
+                          </div>
+                          <div className="text-left text-md bg-red-100 px-3 py-2 rounded-lg font-bold">
+                            {prediction}
+                          </div>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setIsExpanded(index, !error["is_expanded"])
+                          }
+                          className="ms-8 inline-block text-slate-700 border border-slate-600 px-4 py-2 rounded-lg hover:bg-slate-300 text-sm underline"
+                        >
+                          {error["is_expanded"] ? "Hide" : "Show"} output
+                        </button>
+                      </div>
+                      {error["is_expanded"] && (
+                        <div className="mt-4 flex flex-row">
+                          <div className="w-20 text-sm shrink-0 font-bold text-slate-600">
+                            Output
+                          </div>
+                          <div className="grow border border-slate-400 px-3 py-2 rounded-lg whitespace-pre-wrap text-xs font-mono">
+                            {error["explanation"]}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
-        </div>
+        </Suspense>
       </main>
     );
 }

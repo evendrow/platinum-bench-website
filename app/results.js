@@ -167,12 +167,6 @@ export const results = (() => {
   });
 })();
 
-console.log(results);
-
-
-
-
-
 
 export const models = [
   'Llama 3.1 405B Inst',
