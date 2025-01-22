@@ -7,7 +7,7 @@ const nextConfig = {
         },
         {
             source: "/platinum-bench-website/:path*",
-            destination: ":path*", // Proxy to Backend
+            destination: "/:path*", // Proxy to Backend
         },
     ]
 };
