@@ -12,12 +12,12 @@ export function Nav({ active }) {
                 <div className="flex items-center justify-center border-b border-slate-200 relative z-20">
                     <div className="w-full h-14 max-w-[1200px] flex items-center justify-center">
                         <h2 className="inline-block grow text-left text-xl font-medium text-slate-800  px-2">
-                            <a href="/neurips" className="inline-block h-full">
+                            <a href="/" className="inline-block h-full">
                                 PlatinumBench
                             </a> 
                         </h2>
                         <div className="hidden md:flex shrink-0 items-center justify-center h-full">
-                            <a href="/neurips" className={`text-slate-700 hover:text-slate-900 px-2 mx-4 border-b-2 ${active === 'overview' ? 'border-slate-400' : 'border-transparent hover:border-slate-400'} h-full flex items-center`}>Overview</a>
+                            <a href="/" className={`text-slate-700 hover:text-slate-900 px-2 mx-4 border-b-2 ${active === 'overview' ? 'border-slate-400' : 'border-transparent hover:border-slate-400'} h-full flex items-center`}>Overview</a>
                             <a href="/inspect" className={`text-slate-700 hover:text-slate-900 px-2 mx-4 border-b-2 ${active === 'inspect' ? 'border-slate-400' : 'border-transparent hover:border-slate-400'} h-full flex items-center`}>Error Viewer</a>
                             <a href="/inspect" className={`text-slate-700 hover:text-slate-900 px-2 mx-4 border-b-2 ${active === 'paper' ? 'border-slate-400' : 'border-transparent hover:border-slate-400'} h-full flex items-center`} target="_blank">
                             Paper 
@@ -33,7 +33,7 @@ export function Nav({ active }) {
                 </div>
                 <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-slate-500/25 fixed top-14 left-0 z-10 w-full h-full`} onClick={toggle}>
                     <div className="h-full w-[300px] bg-slate-50 text-left pt-4" onClick={e => e.stopPropagation()}>
-                        <a href="/neurips" className={`text-slate-700 hover:text-slate-900 hover:bg-slate-200 px-8 py-3 block`}>Overview</a>
+                        <a href="/" className={`text-slate-700 hover:text-slate-900 hover:bg-slate-200 px-8 py-3 block`}>Overview</a>
                         <a href="/inspect" className={`text-slate-700 hover:text-slate-900 hover:bg-slate-200 px-8 py-3 block`}>Error Viewer</a>
                         <a href="/inspect" className={`text-slate-700 hover:text-slate-900 hover:bg-slate-200 px-8 py-3 block`} target="_blank">
                             Paper 
