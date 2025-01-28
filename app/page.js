@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import * as Icons from "react-bootstrap-icons";
-import { results, models, model_name_to_key } from "./results";
+import { results, models, model_score, model_name_to_key } from "./results";
 import { Nav } from "@/components/nav";
 
 function DatasetName({ children }) {
@@ -162,17 +162,20 @@ export default function Home() {
   // ]
 
   const avg_accuracy_per_model = models.map((model_name, model_index) => {
-    const accuracies = results.map((dataset, dataset_index) => {
-      const accuracy = (dataset.count - dataset.errors[model_index]) / dataset.count * 100;
-      return accuracy;
-    });
-    const avg_accuracy = accuracies.reduce((a, b) => a + b, 0) / accuracies.length;
-    return avg_accuracy;
+    // const accuracies = results.map((dataset, dataset_index) => {
+    //   const accuracy = (dataset.count - dataset.errors[model_index]) / dataset.count * 100;
+    //   return accuracy;
+    // });
+    // const avg_accuracy = accuracies.reduce((a, b) => a + b, 0) / accuracies.length;
+    // return 2;
+    console.log(model_name, model_name_to_key[model_name], model_score[model_name_to_key[model_name]]);
+    return model_score[model_name_to_key[model_name]];
   });
+  console.log(avg_accuracy_per_model);
 
 
   // const data = results;
-  const accuracy_order_index = avg_accuracy_per_model.map((_, i) => i).sort((a, b) => avg_accuracy_per_model[b] - avg_accuracy_per_model[a]);
+  const accuracy_order_index = avg_accuracy_per_model.map((_, i) => i).sort((a, b) => avg_accuracy_per_model[a] - avg_accuracy_per_model[b]);
   const data = results;
   console.log(accuracy_order_index);
 
@@ -184,6 +187,7 @@ export default function Home() {
       errors: accuracy_order_index.map(i => dataset.errors[i])
     };
   })
+  // .sort((a, b) => a.type.localeCompare(b.type))
   .sort((a, b) => (a.errors.reduce((x, y) => x + y, 0) / Number.parseInt(a.count)) - (
     b.errors.reduce((x, y) => x + y, 0) / Number.parseInt(b.count)));
 
@@ -224,7 +228,7 @@ export default function Home() {
 
         <div className="text-center">
 
-          <h1 className="text-3xl md:text-6xl mb-10 font-serif font-medium leading-normal md:leading-normal">Large Language Model Benchmarks <br /> Do Not Test Reliability</h1>
+          <h1 className="text-3xl md:text-6xl mb-10 font-serif font-medium leading-normal md:leading-normal">Do Large Language Model  <br /> Benchmarks Test Reliability?</h1>
 
           {/* Header Section
 
@@ -252,6 +256,18 @@ export default function Home() {
               <Icons.Github className="w-4 h-4 inline-block mr-1" />
               Code
             </OutlineButtonWithURL>
+           
+          </div>
+          <div className="mt-4">
+          <a className="rounded-lg px-4 py-1 mx-2 inline-block hover:bg-slate-200" href="#">
+              <div className="text-sm font-medium flex items-center mb-0.5">
+                <img src="/images/hf-logo.svg" alt="Hugging Face" className="w-5 h-5 inline-block me-1" />
+                HuggingFace
+              </div>
+              <div>
+                <p className="text-xs font-mono">load_dataset("madryml/platinum-bench")</p>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -261,7 +277,7 @@ export default function Home() {
       <div className="w-full max-w-[800px] flex flex-col items-start font-medium text-left mb-6">
         <p className="mb-8">Language models have achieved impressive capabilities, from solving graduate-level problems to generating complex code. However, when deploying these models in real-world applications, reliability is crucial - models need to consistently provide correct answers, not just perform well on average.</p>
 
-        <p className="mb-8">We propose the construction of so-called <b className="text-sky-500 italic">"platinum benchmarks"</b> that are carefully curated to minimize label errors and ambiguity, where perfect performance is possible. As a first attempt at constructing such benchmarks, we revised examples from fifteen existing popular benchmarks so that 100% performance is achievable.</p>
+        <p className="mb-8">We propose <b className="text-sky-500 italic">Platinum Benchmarks</b> that are carefully curated to minimize label errors and ambiguity, where perfect performance is possible. This dataset containts fifteen platinum benchmarks created by manually revising questions from existing datasets. We ran a variety of frontier models on our benchmarks and verified that all errors they make are genuine.</p>
 
         <p><b>Turns out, frontier language models still make mistakes on surprisingly simple tasks:</b></p>
 
@@ -304,7 +320,7 @@ export default function Home() {
           <div className="ps-4">
             <div className="h-24 mb-2 flex flex-row justify-start">
               <div className='w-14 mx-1 shrink-0 flex flex-col font-bold text-sm justify-end'>
-                Overall
+                Score
               </div>
               {data_sorted.map((dataset, index) => (
                   <div key={index} className='w-14 mx-1 shrink-0 flex flex-col font-medium text-xs justify-end'>
@@ -331,12 +347,13 @@ export default function Home() {
                 <GridBlock className={`text-slate-800 bg-slate-200`}
                           url={`/inspect?model=${model_name_to_key[model_name]}`}>
 
-                  {showPercent ? (
+                  {/* {showPercent ? (
                       <h1 className="text-sm font-bold">{avg_accuracy_per_model[model_names.indexOf(model_name)].toFixed(1)}%</h1>) : 
                     (
                       <h1 className="text-sm font-bold">{(data_sorted.reduce((acc, dataset) => acc + dataset.errors[index], 0) / data_sorted.length).toFixed(1)}</h1>
                     )
-                  }
+                  } */}
+                  <h1 className="text-sm font-bold">{avg_accuracy_per_model[model_names.indexOf(model_name)].toFixed(1)}%</h1>
                 </GridBlock>
 
                 {data_sorted.map((dataset, d_index) => {
