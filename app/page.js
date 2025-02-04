@@ -259,7 +259,7 @@ export default function Home() {
            
           </div>
           <div className="mt-4">
-          <a className="rounded-lg px-4 py-1 mx-2 inline-block hover:bg-slate-200" href="#">
+          <a className="rounded-lg px-4 py-1 mx-2 inline-block hover:bg-slate-200" href="https://huggingface.co/datasets/madrylab/platinum-bench" target="_blank">
               <div className="text-sm font-medium flex items-center mb-0.5">
                 <img src="/images/hf-logo.svg" alt="Hugging Face" className="w-5 h-5 inline-block me-1" />
                 HuggingFace
@@ -275,9 +275,13 @@ export default function Home() {
 
       {/* <h1 className="text-3xl mb-5">🎯 Model Reliability</h1> */}
       <div className="w-full max-w-[800px] flex flex-col items-start font-medium text-left mb-6">
-        <p className="mb-8">Language models have achieved impressive capabilities, from solving graduate-level problems to generating complex code. However, when deploying these models in real-world applications, reliability is crucial - models need to consistently provide correct answers, not just perform well on average.</p>
+        {/* <p className="mb-8">Language models have achieved impressive capabilities, from solving graduate-level problems to generating complex code. However, when deploying these models in real-world applications, reliability is crucial - models need to consistently provide correct answers, not just perform well on average.</p> */}
+        {/* <p className="mb-8">We propose <b className="text-sky-500 italic">Platinum Benchmarks</b> that are carefully curated to minimize label errors and ambiguity, where perfect performance is possible. This dataset containts fifteen platinum benchmarks created by manually revising questions from existing datasets. We ran a variety of frontier models on our benchmarks and verified that all errors they make are genuine.</p> */}
+        <p className="mb-8">
+          When deploying LLMs in real-world applications, reliability is crucial - models need to consistently provide correct answers, not just perform well on average. To measure this kind of reliability, We propose <b className="text-sky-500 font-bold italic">Platinum Benchmarks</b> that are carefully curated to minimize label errors and ambiguity, where perfect performance is possible. As a first attempt at constructing such benchmarks, we manually revised fifteen existing benchmarks remove dataset errors.
+        </p>
 
-        <p className="mb-8">We propose <b className="text-sky-500 italic">Platinum Benchmarks</b> that are carefully curated to minimize label errors and ambiguity, where perfect performance is possible. This dataset containts fifteen platinum benchmarks created by manually revising questions from existing datasets. We ran a variety of frontier models on our benchmarks and verified that all errors they make are genuine.</p>
+        <p className="mb-8">Along the way, we realized we can use these benchmarks to make an interpretable leaderboard. Sometimes, it can be hard to understand what the performance on a benchmark really means. In our case, every single error corresponds to a genuine error that a frontier LLM makes on a simple task. By clicking on each model/benchmark pair below, you can look at the exact questions the model failed on and how it messed up. Doing so can actually tell us a lot about the ways that LLMs fail (hint: look at “New Failure Patterns” below)</p>
 
         <p><b>Turns out, frontier language models still make mistakes on surprisingly simple tasks:</b></p>
 
@@ -465,6 +469,20 @@ export default function Home() {
       </div>
     </div>
 
+
+    <section className="text-left w-full max-w-[800px] mt-10">
+      <h1 className="text-4xl mt-12 font-serif">Key Findings</h1>
+
+      <h2 className="text-xl mb-2 font-bold font-serif mt-6">No Model is Truly Reliable</h2>
+      <p>Despite demonstrating advanced capabilities like solving graduate-level problems, every model we tested still makes mistakes on basic tasks. For instance, we found models that could tackle complex calculus problems failing to perform elementary arithmetic or answer simple questions about event sequences. These aren't rare edge cases - the failures occur consistently and predictically.</p>
+
+      <h2 className="text-xl mb-2 font-bold font-serif mt-6">Current Benchmarks Hide Problems</h2>
+      <p>When we examined popular benchmarks like GSM8K and SVAMP, we found significant rates of errors and ambiguities in the questions themselves. In GSM8K, about 5% of questions contained problems. This benchmark noise has masked true model performance - many reported "errors" were actually correct responses to flawed questions.</p>
+
+      <h2 className="text-xl mb-2 font-bold font-serif mt-6">Different Models, Different Strengths</h2>
+      <p>While no model achieved perfect performance across our tests, we found interesting patterns in their reliability. OpenAI's o1-mini showed the strongest performance on mathematics, while Claude Sonnet 3.5 excelled at reading comprehension. This suggests that choosing the right model depends on the specific task.</p>
+    </section>
+
     <section className="text-left w-full max-w-[800px] mt-10">
         <h1 className="text-4xl mt-12 font-serif">Revising Noisy Benchmarks</h1>
 
@@ -540,18 +558,6 @@ export default function Home() {
       </section>
 
 
-      <section className="text-left w-full max-w-[800px] mt-10">
-        <h1 className="text-4xl mt-12 font-serif">Key Findings</h1>
-
-        <h2 className="text-xl mb-2 font-bold font-serif mt-6">No Model is Truly Reliable</h2>
-        <p>Despite demonstrating advanced capabilities like solving graduate-level problems, every model we tested still makes mistakes on basic tasks. For instance, we found models that could tackle complex calculus problems failing to perform elementary arithmetic or answer simple questions about event sequences. These aren't rare edge cases - the failures occur consistently and predictically.</p>
-
-        <h2 className="text-xl mb-2 font-bold font-serif mt-6">Current Benchmarks Hide Problems</h2>
-        <p>When we examined popular benchmarks like GSM8K and SVAMP, we found significant rates of errors and ambiguities in the questions themselves. In GSM8K, about 5% of questions contained problems. This benchmark noise has masked true model performance - many reported "errors" were actually correct responses to flawed questions.</p>
-
-        <h2 className="text-xl mb-2 font-bold font-serif mt-6">Different Models, Different Strengths</h2>
-        <p>While no model achieved perfect performance across our tests, we found interesting patterns in their reliability. OpenAI's o1-mini showed the strongest performance on mathematics, while Claude Sonnet 3.5 excelled at reading comprehension. This suggests that choosing the right model depends on the specific task.</p>
-      </section>
 
         
       <section className="text-left w-full max-w-[800px] mt-10">
@@ -641,13 +647,13 @@ export default function Home() {
                 <div className="grow px-4">
                   <div className="text-lg font-medium font-serif">Joshua Vendrow</div>
                   <div>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://joshvendrow.com/" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.Globe className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://x.com/josh_vendrow" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.TwitterX className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://github.com/jvendrow" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.Github className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
                   </div>
@@ -663,13 +669,13 @@ export default function Home() {
                 <div className="grow px-4">
                   <div className="text-lg font-medium font-serif">Edward Vendrow</div>
                   <div>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://edwardv.com" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.Globe className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://x.com/EdwardVendrow" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.TwitterX className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://github.com/evendrow" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.Github className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
                   </div>
@@ -685,14 +691,11 @@ export default function Home() {
                 <div className="grow px-4">
                   <div className="text-lg font-medium font-serif">Sara Beery</div>
                   <div>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://beerys.github.io/" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.Globe className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://x.com/sarameghanbeery" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.TwitterX className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
-                    </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
-                      <Icons.Github className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
                   </div>
                 </div>
@@ -707,14 +710,11 @@ export default function Home() {
                 <div className="grow px-4">
                   <div className="text-lg font-medium font-serif">Aleksander Mądry</div>
                   <div>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://madry.mit.edu/" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.Globe className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
+                    <a target="_blank" href="https://x.com/aleks_madry" className="text-black inline-block w-7 h-7 me-2">
                       <Icons.TwitterX className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
-                    </a>
-                    <a target="_blank" href="#" className="text-black inline-block w-7 h-7 me-2">
-                      <Icons.Github className="w-full h-full inline rounded-lg text-slate-700 hover:text-black hover:bg-slate-200 p-1" />
                     </a>
                   </div>
                 </div>
