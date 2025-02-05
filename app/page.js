@@ -251,18 +251,13 @@ export default function Home() {
               Paper
             </OutlineButtonWithURL>
             <OutlineButtonWithURL>
-              <Icons.Link45deg className="w-4 h-4 inline-block mr-1" />
-              arXiv
+              <Icons.PencilFill className="w-4 h-4 inline-block mr-2" />
+              Blog
             </OutlineButtonWithURL>
             <OutlineButtonWithURL url={"https://github.com/MadryLab/platinum-bench"}>
               <Icons.Github className="w-4 h-4 inline-block mr-1" />
               Code
             </OutlineButtonWithURL>
-            <OutlineButtonWithURL>
-              <Icons.PencilFill className="w-4 h-4 inline-block mr-2" />
-              Blog
-            </OutlineButtonWithURL>
-           
           </div>
           <div className="mt-4">
           <a className="rounded-lg px-4 py-1 mx-2 inline-block hover:bg-slate-200" href="https://huggingface.co/datasets/madrylab/platinum-bench" target="_blank">
@@ -289,7 +284,7 @@ export default function Home() {
 
         <h1 className="text-4xl mt-12 font-serif mb-8 w-full">Live Leaderboard</h1>
 
-        <p className="mb-8">Along the way, we realized we can use these benchmarks to make an <i>interpretable</i> leaderboard. Sometimes, it can be hard to understand what the performance on a benchmark really means. In our case, every single error corresponds to a genuine mistake that a frontier LLM makes on a simple task. By clicking on each model/benchmark pair below, you can look at the exact questions the model failed on and how it messed up. Doing so can actually tell us a lot about the ways that LLMs fail (hint: look at “New Failure Patterns” below).</p>
+        <p className="mb-8">Every single error corresponds to a genuine mistake that a frontier LLM makes. By clicking on each model/benchmark pair below, you can look at the exact questions the model failed on and how it messed up. Doing so can actually tell us a lot about the ways that LLMs fail (see “New Failure Patterns” below).</p>
 
         <p className="mb-8">
           {/* We will evaluate your model on LiveBench! Open a github issue or email us at livebench.ai@gmail.com! */}
