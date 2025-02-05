@@ -51,7 +51,7 @@ function OutlineButtonWithURL({ children, url }) {
 }
 
 
-function ModelOutput({ model, reasoning, answer, answer_className}) {
+function ModelOutput({ children, model, reasoning, answer, answer_className}) {
   const [isExpanded, setIsExpanded] = useState(false);
   
   return (
@@ -59,7 +59,9 @@ function ModelOutput({ model, reasoning, answer, answer_className}) {
       <div className="font-bold text-slate-700 mb-2">{model}</div>
       {isExpanded ? (
         <>
-          <div className="text-slate-600 whitespace-pre-wrap my-3 font-mono text-sm">{reasoning}</div>
+          <div className="text-slate-700 whitespace-pre-wrap my-3 font-mono text-sm">
+            {reasoning}{children}
+          </div>
           <div className="font-bold font-mono text-sm">Answer: <span className={answer_className}>{answer}</span></div>
           <button 
             onClick={() => setIsExpanded(false)}
@@ -224,11 +226,11 @@ export default function Home() {
       <Nav active="overview" />
 
 
-      <section className="w-full min-h-[500px] flex flex-col items-center justify-center px-10 py-16 mt-8" >
+      <section className="w-full min-h-[500px] flex flex-col items-center justify-center px-10 py-8 mt-8" >
 
         <div className="text-center">
 
-          <h1 className="text-3xl md:text-6xl mb-10 font-serif font-medium leading-normal md:leading-normal">Do Large Language Model  <br /> Benchmarks Test Reliability?</h1>
+          <h1 className="text-3xl md:text-6xl mb-8 font-serif font-medium leading-normal md:leading-normal">Do Large Language Model  <br /> Benchmarks Test Reliability?</h1>
 
           {/* Header Section
 
@@ -252,9 +254,13 @@ export default function Home() {
               <Icons.Link45deg className="w-4 h-4 inline-block mr-1" />
               arXiv
             </OutlineButtonWithURL>
-            <OutlineButtonWithURL>
+            <OutlineButtonWithURL url={"https://github.com/MadryLab/platinum-bench"}>
               <Icons.Github className="w-4 h-4 inline-block mr-1" />
               Code
+            </OutlineButtonWithURL>
+            <OutlineButtonWithURL>
+              <Icons.PencilFill className="w-4 h-4 inline-block mr-2" />
+              Blog
             </OutlineButtonWithURL>
            
           </div>
@@ -265,7 +271,7 @@ export default function Home() {
                 HuggingFace
               </div>
               <div>
-                <p className="text-xs font-mono">load_dataset("madryml/platinum-bench")</p>
+                <p className="text-xs font-mono">load_dataset("madrylab/platinum-bench")</p>
               </div>
             </a>
           </div>
@@ -274,16 +280,23 @@ export default function Home() {
       </section>
 
       {/* <h1 className="text-3xl mb-5">🎯 Model Reliability</h1> */}
-      <div className="w-full max-w-[800px] flex flex-col items-start font-medium text-left mb-6">
+      <div className="w-full max-w-[800px] flex flex-col items-start text-left mb-6">
         {/* <p className="mb-8">Language models have achieved impressive capabilities, from solving graduate-level problems to generating complex code. However, when deploying these models in real-world applications, reliability is crucial - models need to consistently provide correct answers, not just perform well on average.</p> */}
         {/* <p className="mb-8">We propose <b className="text-sky-500 italic">Platinum Benchmarks</b> that are carefully curated to minimize label errors and ambiguity, where perfect performance is possible. This dataset containts fifteen platinum benchmarks created by manually revising questions from existing datasets. We ran a variety of frontier models on our benchmarks and verified that all errors they make are genuine.</p> */}
         <p className="mb-8">
           When deploying LLMs in real-world applications, reliability is crucial - models need to consistently provide correct answers, not just perform well on average. To measure this kind of reliability, We propose <b className="text-sky-500 font-bold italic">Platinum Benchmarks</b> that are carefully curated to minimize label errors and ambiguity, where perfect performance is possible. As a first attempt at constructing such benchmarks, we manually revised fifteen existing benchmarks remove dataset errors.
         </p>
 
-        <p className="mb-8">Along the way, we realized we can use these benchmarks to make an interpretable leaderboard. Sometimes, it can be hard to understand what the performance on a benchmark really means. In our case, every single error corresponds to a genuine error that a frontier LLM makes on a simple task. By clicking on each model/benchmark pair below, you can look at the exact questions the model failed on and how it messed up. Doing so can actually tell us a lot about the ways that LLMs fail (hint: look at “New Failure Patterns” below)</p>
+        <h1 className="text-4xl mt-12 font-serif mb-8 w-full">Live Leaderboard</h1>
 
-        <p><b>Turns out, frontier language models still make mistakes on surprisingly simple tasks:</b></p>
+        <p className="mb-8">Along the way, we realized we can use these benchmarks to make an <i>interpretable</i> leaderboard. Sometimes, it can be hard to understand what the performance on a benchmark really means. In our case, every single error corresponds to a genuine mistake that a frontier LLM makes on a simple task. By clicking on each model/benchmark pair below, you can look at the exact questions the model failed on and how it messed up. Doing so can actually tell us a lot about the ways that LLMs fail (hint: look at “New Failure Patterns” below).</p>
+
+        <p className="mb-8">
+          {/* We will evaluate your model on LiveBench! Open a github issue or email us at livebench.ai@gmail.com! */}
+          We plan to update the leaderboard as new models are released. <b>If you would like to see your model evaluated here, please open a github issue or email us!</b>
+        </p>
+
+        {/* <p><b>Turns out, frontier language models still make mistakes on surprisingly simple tasks:</b></p> */}
 
         <p className="text-slate-600 text-sm">Press on a box to view the corresponding errors.</p>
 
@@ -424,7 +437,7 @@ export default function Home() {
             ))}
 
             <div className="mt-3 italics text-sm font-medium text-slate-700">
-              Number of errors per model on each benchmark
+              Number of errors per model on each benchmark. The score is the average error rate, equally weighted across categories.
             </div>
             
           </div>
@@ -577,10 +590,11 @@ export default function Home() {
             
             <ModelOutput 
               model="Claude 3.5 Sonnet"
-              reasoning="...we can conclude that the Russians blocking Azov happened before the Treaty of Constantinople."
+              reasoning="we can conclude that the Russians blocking Azov happened before the Treaty of Constantinople."
               answer="Russians blocked Azov"
               answer_className={'text-red-500'}
-            />
+            >
+            </ModelOutput>
             
             <ModelOutput 
               model="Mistral Small"
@@ -611,9 +625,28 @@ export default function Home() {
             
             <ModelOutput 
               model="Claude 3.5 Sonnet"
-              reasoning="To find the number of buses needed, we divide the total number of students by the number of seats per bus: 4,422 ÷ 6 = 737. However, since we can't have a fraction of a bus, we need to round up to the next whole number to ensure all students have a seat."
+              reasoning="" //To find the number of buses needed, we divide the total number of students by the number of seats per bus: 4,422 ÷ 6 = 737. However, since we can't have a fraction of a bus, we need to round up to the next whole number to ensure all students have a seat."
               answer="738"
-            />
+              answer_className={'text-red-500'}
+            >
+              <p className="mb-3">Let's solve this problem step-by-step:</p>
+
+              <p className="">1. First, we need to find the total number of students in the school:</p>
+              <p className="">Number of classrooms × Students per classroom</p>
+              <p className="mb-3">67 × 66 = 4,422 students</p>
+
+              <p className="mb-3">2. Now we know that we need to transport 4,422 students.</p>
+
+              <p className="mb-3">3. Each bus has 6 seats.</p>
+
+              <p className="">4. To find the number of buses needed, we divide the total number of students by the number of seats per bus:</p>
+              <p className="mb-3">4,422 ÷ 6 = 737</p>
+
+              <p className="mb-3">5. However, since we can't have a fraction of a bus, we need to round up to the next whole number to ensure all students have a seat.</p>
+
+              <p className="mb-3">Therefore, the school needs 738 buses to take all students on the trip.</p>
+              {/* Answer: 738 */}
+              </ModelOutput>
           </div>
         </div>
       </section>
@@ -626,7 +659,7 @@ export default function Home() {
           Our work demonstrates that even the most advanced language models still struggle with basic tasks. The platinum benchmarks we've constructed are an initial step towards evaluating reliability, and we encourage researchers to use them to evaluate their frontier models&mdash;but more work is needed to create comprehensive tests that cover a wide range of tasks and domains.
         </p>
         <p className="mt-4">
-          We hope that our work motivates the adoption of platinum benchmarks in evaluating LLMs to ensure they meet the high reliability standards required for real-world applications.
+          We hope that our work motivates the adoption of platinum benchmarks in evaluating LLMs to ensure they meet the high reliability standards required in real-world applications.
         </p>
       </section>
       

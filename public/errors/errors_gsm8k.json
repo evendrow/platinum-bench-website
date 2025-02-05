@@ -161,14 +161,6 @@
       "explanation": "To solve this problem, we need to establish relationships between the ages of Jean, Mark, and Jan, and then solve for Jean's age.\n\n1. **Understand the relationships:**\n   - Let Mark's current age be \\( M \\).\n   - Jean is two years older than Mark, so Jean's current age is \\( M + 2 \\).\n   - Jan's current age is given as 30.\n\n2. **Translate the condition about Mark's age two years ago:**\n   - Two years ago, Mark's age was \\( M - 2 \\).\n   - Two years ago, Mark was 5 years older than half of Jan's age. Since Jan is 30, half of Jan's age is \\( \\frac{30}{2} = 15 \\).\n   - Therefore, two years ago, Mark's age was \\( 15 + 5 = 20 \\).\n\n3. **Set up the equation based on the above condition:**\n   \\[\n   M - 2 = 20\n   \\]\n\n4. **Solve for Mark's current age \\( M \\):**\n   \\[\n   M - 2 = 20 \\\\\n   M = 20 + 2 \\\\\n   M = 22\n   \\]\n\n5. **Find Jean's current age:**\n   - Since Jean is two years older than Mark, Jean's age is \\( M + 2 = 22 + 2 = 24 \\).\n\nThus, the final answer is:\n\nAnswer: 24"
     },
     {
-      "prompt": "Solve the following math word problem.\n\nLast night Rick killed ten wolves and 15 cougars while hunting. Today Rick killed three times as many wolves as cougars and three fewer cougars than the previous night. How many animals did Rick kill?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
-      "platinum_target": [
-        "73"
-      ],
-      "prediction": "48",
-      "explanation": "To find out how many animals Rick killed today, we need to determine the number of wolves and cougars he killed today based on the information given.\n\n1. **Cougars Killed Today:**\n   - Last night, Rick killed 15 cougars.\n   - Today, he killed three fewer cougars than the previous night.\n   - Therefore, the number of cougars killed today is:\n     \\[\n     15 - 3 = 12\n     \\]\n\n2. **Wolves Killed Today:**\n   - Today, Rick killed three times as many wolves as cougars.\n   - We already calculated that he killed 12 cougars today.\n   - Therefore, the number of wolves killed today is:\n     \\[\n     3 \\times 12 = 36\n     \\]\n\n3. **Total Animals Killed Today:**\n   - Add the number of wolves and cougars killed today to find the total number of animals killed:\n   \\[\n   36 \\text{ (wolves)} + 12 \\text{ (cougars)} = 48\n   \\]\n\nTherefore, the total number of animals Rick killed today is:\n\n\\[\n\\text{Answer: 48}\n\\]"
-    },
-    {
       "prompt": "Solve the following math word problem.\n\nA landscaping company is delivering flagstones to a customer\u2019s yard. Each flagstone weighs 75 pounds. If the delivery trucks can carry a total weight of 2000 pounds, how many trucks will be needed to transport 80 flagstones in one trip?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
       "platinum_target": [
         "4"
@@ -615,14 +607,6 @@
       "explanation": "To solve the problem, let's break it down step by step:\n\n1. **First 6 hours**: Debra sees **30 bees leave** the hive.\n   \n2. **Next 6 hours**: She sees **half** of that number, which is **15 bees**, return to the hive.\n\n3. **Next 6 hours**: She sees **twice** as many bees as initially left, which is **60 bees**, leave the hive.\n\n4. **Last 6 hours**: Every bee that **left before the 60 bees left** (i.e., the bees from the first 6 hours that haven't returned yet) returns to the hive. Since **15 bees** from the first group already returned, there are **15 bees** remaining from the first group.\n\nTherefore, during the last 6 hours, **15 bees return** to the hive.\n\n**Answer: 15**"
     },
     {
-      "prompt": "Solve the following math word problem.\n\nLast night Rick killed ten wolves and 15 cougars while hunting. Today Rick killed three times as many wolves as cougars and three fewer cougars than the previous night. How many animals did Rick kill?\n\nProvide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
-      "platinum_target": [
-        "73"
-      ],
-      "prediction": "48",
-      "explanation": "To solve the problem, we first identify the number of cougars killed today:\n\n- Today, Rick killed three fewer cougars than the previous night, so he killed \\(15 - 3 = 12\\) cougars.\n\nNext, we find the number of wolves killed today:\n\n- Today, Rick killed three times as many wolves as cougars, so he killed \\(3 \\times 12 = 36\\) wolves.\n\nFinally, we calculate the total number of animals killed today:\n\n- Total animals killed = Number of wolves + Number of cougars \\(= 36 + 12 = 48\\).\n\n**Answer: 48**"
-    },
-    {
       "prompt": "Solve the following math word problem.\n\nThree friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?\n\nProvide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
       "platinum_target": [
         "83"
@@ -1007,6 +991,24 @@
       "explanation": "Step 1: Calculate the total weight of 80 flagstones.\n80 flagstones * 75 pounds/flagstone = 6000 pounds\n\nStep 2: Determine how many trips are needed based on the truck's capacity.\n6000 pounds / 2000 pounds/trip = 3 trips\n\nAnswer: 3"
     }
   ],
+  "o1-2024-12-17-med": [
+    {
+      "prompt": "Solve the following math word problem.\n\nJean is two years older than Mark.  Two years ago Mark was 5 years older than half Jan's age.  If Jan is 30 how old is Jean?\n\nProvide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "23"
+      ],
+      "prediction": "24",
+      "explanation": "Answer: 24"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nA landscaping company is delivering flagstones to a customer\u2019s yard. Each flagstone weighs 75 pounds. If the delivery trucks can carry a total weight of 2000 pounds, how many trucks will be needed to transport 80 flagstones in one trip?\n\nProvide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "4"
+      ],
+      "prediction": "3",
+      "explanation": "Answer: 3"
+    }
+  ],
   "o1-2024-12-17-high": [
     {
       "prompt": "Solve the following math word problem.\n\nJean is two years older than Mark.  Two years ago Mark was 5 years older than half Jan's age.  If Jan is 30 how old is Jean?\n\nProvide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
@@ -1017,20 +1019,32 @@
       "explanation": "Answer: 24"
     },
     {
-      "prompt": "Solve the following math word problem.\n\nLast night Rick killed ten wolves and 15 cougars while hunting. Today Rick killed three times as many wolves as cougars and three fewer cougars than the previous night. How many animals did Rick kill?\n\nProvide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
-      "platinum_target": [
-        "73"
-      ],
-      "prediction": "48",
-      "explanation": "Answer: 48"
-    },
-    {
       "prompt": "Solve the following math word problem.\n\nA landscaping company is delivering flagstones to a customer\u2019s yard. Each flagstone weighs 75 pounds. If the delivery trucks can carry a total weight of 2000 pounds, how many trucks will be needed to transport 80 flagstones in one trip?\n\nProvide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
       "platinum_target": [
         "4"
       ],
       "prediction": "3",
       "explanation": "Answer: 3"
+    }
+  ],
+  "deepseek-r1": [
+    {
+      "prompt": "Solve the following math word problem.\n\nA landscaping company is delivering flagstones to a customer\u2019s yard. Each flagstone weighs 75 pounds. If the delivery trucks can carry a total weight of 2000 pounds, how many trucks will be needed to transport 80 flagstones in one trip?\n\nThen, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "4"
+      ],
+      "prediction": "3",
+      "explanation": "<cot>\nOkay, let's see. So the problem is about a landscaping company that needs to deliver flagstones. Each flagstone weighs 75 pounds. Their trucks can carry up to 2000 pounds each. They want to know how many trucks are needed to transport 80 flagstones in one trip.\n\nHmm, right. So first, I need to figure out the total weight of all the flagstones. Since each one is 75 pounds and there are 80 of them. So total weight is 75 multiplied by 80. Let me calculate that. 75 times 80. Well, 75 times 10 is 750, so times 8 would be 6000. Wait, no, 75 times 80 is 75*8*10. 75*8 is 600, so 600*10 is 6000. So total weight is 6000 pounds.\n\nThen, each truck can carry 2000 pounds. So how many trucks do we need to carry 6000 pounds? Divide the total weight by the truck's capacity. So 6000 divided by 2000. That's 3. So three trucks would be needed? Wait, but let me double-check because division might not always be straightforward here. If each truck can carry 2000 pounds, then 3 trucks can carry 3*2000=6000, which exactly matches the total needed. So that works. So 3 trucks.\n\nBut wait, sometimes in these problems, you have to consider that you can't have a fraction of a truck, so even if there's a remainder, you have to round up. But in this case, 6000 divided by 2000 is exactly 3, so there's no remainder. So three trucks should do it. Let me just confirm the numbers again. 80 flagstones at 75 each: 80*75. Let me break it down. 70*75 is 5250, and 10*75 is 750. Adding those gives 5250+750=6000. Yes, that's correct. Then 6000 divided by 2000 is 3. So the answer should be 3 trucks.\n</cot>\n\nAnswer: 3"
+    }
+  ],
+  "o3-mini-2025-01-31-high": [
+    {
+      "prompt": "Solve the following math word problem.\n\nA landscaping company is delivering flagstones to a customer\u2019s yard. Each flagstone weighs 75 pounds. If the delivery trucks can carry a total weight of 2000 pounds, how many trucks will be needed to transport 80 flagstones in one trip?\n\nThen, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "4"
+      ],
+      "prediction": "3",
+      "explanation": "First, calculate the total weight of the flagstones:\n80 flagstones \u00d7 75 pounds/flagstone = 6000 pounds.\n\nNext, determine how many trucks are needed if each truck can carry 2000 pounds:\n6000 pounds \u00f7 2000 pounds/truck = 3 trucks.\n\nAnswer: 3"
     }
   ]
 }

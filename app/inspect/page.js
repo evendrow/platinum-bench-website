@@ -42,8 +42,6 @@ function InspectPageContents() {
         'gpt-4o-2024-11-20',
         'gpt-4o-2024-08-06',
         'claude-3-5-sonnet',
-        'o1-mini',
-        'o1-preview-2024-09-12',
         'meta-llama/Llama-3.3-70B-Instruct',
         'grok-2-1212',
         'claude-3-5-sonnet-20241022',
@@ -52,7 +50,12 @@ function InspectPageContents() {
         'gemini-2.0-flash-thinking',
         'deepseek/deepseek-chat',
         'Qwen/Qwen2.5-72B-Instruct',
-        'o1-2024-12-17-high'
+        'deepseek-r1',
+        'o1-mini',
+        'o1-preview-2024-09-12',
+        'o1-2024-12-17-med',
+        'o1-2024-12-17-high',
+        'o3-mini-2025-01-31-high',
     ]
     const key_to_model_name = Object.fromEntries(Object.entries(model_name_to_key).map(([key, value]) => [value, key]))
     
@@ -207,7 +210,7 @@ function InspectPageContents() {
           </div>
         </div>
         <div className="h-full grow flex flex-col">
-          <div className="shrink-0 border-b border-slate-300 px-6 py-6">
+          <div className="shrink-0 border-b border-slate-300 px-6 py-3">
             {/* <h1 className="text-3xl mb-6 text-left font-serif">Error Viewer</h1> */}
             <h1 className="text-xl mb-6 text-left font-medium">
               Showing errors on <b className="text-blue-600">{dataset}</b>{" "}
@@ -218,7 +221,7 @@ function InspectPageContents() {
               {model_names.map((model_name, index) => (
                 <div key={index}
                   className={
-                    `inline-block px-0.5 py-0 h-7 rounded-lg  mx-1 mt-2 text-sm ` +
+                    `inline-block px-0.5 py-0 rounded-lg  mx-0.5 mt-1 text-sm ` +
                     (model_name == model
                       ? `bg-slate-700 text-white border border-slate-700 hover:bg-slate-600`
                       : `border border-slate-600 hover:bg-slate-200` +
@@ -230,7 +233,7 @@ function InspectPageContents() {
                 >
                   <a
                     href={`/inspect?model=${model_name}&dataset=${dataset}`}
-                    className={"inline-block px-2 py-0.5 "
+                    className={"inline-flex items-center px-2"
                     }
                   >
                     {key_to_model_name[model_name]}
@@ -238,7 +241,7 @@ function InspectPageContents() {
                     {data[model_name]?.length ? (
                       <div
                         className={
-                          "inline-flex items-center justify-center ms-2 px-1 text-xs rounded-full h-5 min-w-5 " +
+                          "inline-flex items-center justify-center ms-2 px-1 text-xs rounded-full h-4 min-w-4 " +
                           (model_name == model
                             ? "bg-white text-slate-700"
                             : "bg-slate-700 text-white")
@@ -283,8 +286,8 @@ function InspectPageContents() {
                       {question}
                     </div>
                   </div>
-                  <div className="flex flex-row flex-wrap items-center justify-start">
-                    <div className="flex flex-row flex-wrap items-center">
+                  <div className="flex flex-row flex-wrap items-center justify-end gap-3">
+                    <div className="grow flex flex-row flex-wrap items-center">
                       <div className="w-20 text-sm shrink-0 font-bold text-slate-600">
                         Solution
                       </div>
@@ -302,7 +305,7 @@ function InspectPageContents() {
                       onClick={() =>
                         setIsExpanded(index, !error["is_expanded"])
                       }
-                      className="ms-8 inline-block text-slate-700 border border-slate-600 px-4 py-2 rounded-lg hover:bg-slate-300 text-sm underline"
+                      className="shrink-0 ms-8 inline-block text-slate-700 border border-slate-600 px-4 py-2 rounded-lg hover:bg-slate-300 text-sm underline"
                     >
                       {error["is_expanded"] ? "Hide" : "Show"} output
                     </button>

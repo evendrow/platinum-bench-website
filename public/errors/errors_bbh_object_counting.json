@@ -947,5 +947,17 @@
       "explanation": "To determine the total number of animals, let's count each one:\n\n1. Mouse - 1\n2. Frog - 1\n3. Snails - 2\n4. Goat - 1\n5. Cat - 1\n6. Fish - 1\n7. Cow - 1\n8. Pig - 1\n9. Ducks - 4\n10. Rabbit - 1\n\nNow, let's add them up:\n\n1 + 1 + 2 + 1 + 1 + 1 + 1 + 1 + 4 + 1 = 15\n\nSo, the total number of animals is:\n\nAnswer: 15"
     }
   ],
-  "o1-2024-12-17-high": []
+  "o1-2024-12-17-med": [],
+  "o1-2024-12-17-high": [],
+  "deepseek-r1": [],
+  "o3-mini-2025-01-31-high": [
+    {
+      "prompt": "Answer the following question. \n\nI have a lettuce head, two yams, a cabbage, a stalk of celery, three heads of broccoli, a garlic, an onion, a carrot, a cauliflower, and a potato. How many vegetables do I have?\n\nThen, provide the final answer as a single integer in the format: \"Answer: XXX\".",
+      "platinum_target": [
+        "13"
+      ],
+      "prediction": "12",
+      "explanation": "To solve this, count each vegetable based on the description:\n\n\u2022 Lettuce head: 1  \n\u2022 Two yams: 2  \n\u2022 Cabbage: 1  \n\u2022 Stalk of celery: 1  \n\u2022 Three heads of broccoli: 3  \n\u2022 Garlic: 1  \n\u2022 Onion: 1  \n\u2022 Carrot: 1  \n\u2022 Cauliflower: 1  \n\u2022 Potato: 1  \n\nNow, add them up: 1 + 2 + 1 + 1 + 3 + 1 + 1 + 1 + 1 + 1 = 12\n\nAnswer: 12"
+    }
+  ]
 }

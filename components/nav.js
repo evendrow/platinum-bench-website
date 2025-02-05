@@ -42,7 +42,7 @@ export function Nav({ active }) {
                     </div>
                 </div>
             </div>
-            <div className="h-14"></div>
+            <div className="h-14 w-full shrink-0"></div>
         </>
     )
 }

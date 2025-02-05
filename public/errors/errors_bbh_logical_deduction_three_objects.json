@@ -12,16 +12,7 @@
     }
   ],
   "gpt-4o-2024-11-20": [],
-  "gpt-4o-2024-08-06": [
-    {
-      "prompt": "Answer the following question. \n\nThe following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a yellow book, a green book, and a red book. The red book is to the left of the green book. The yellow book is to the left of the red book.\nOptions:\n(A) The yellow book is the leftmost\n(B) The green book is the leftmost\n(C) The red book is the leftmost\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: (A)\".",
-      "platinum_target": [
-        "(a)"
-      ],
-      "prediction": "parsing error",
-      "explanation": "To solve this problem, let's analyze the given information step-by-step:\n\n1. **Initial Setup:** We have three books: a yellow book, a green book, and a red book.\n\n2. **Position of the Red Book:** According to the statement,"
-    }
-  ],
+  "gpt-4o-2024-08-06": [],
   "gemini-1.5-pro": [
     {
       "prompt": "Answer the following question. \n\nThe following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: an orange book, a yellow book, and a blue book. The blue book is to the right of the yellow book. The orange book is the second from the left.\nOptions:\n(A) The orange book is the second from the left\n(B) The yellow book is the second from the left\n(C) The blue book is the second from the left\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: (A)\".",
@@ -495,5 +486,17 @@
       "explanation": "To determine the order of the vehicles from newest to oldest, we need to analyze the given information:\n\n1. The convertible is older than the tractor.\n2. The hatchback is the second-newest.\n\nFrom the second statement, we know the hatchback is the second-newest. This means there is one vehicle that is newer than the hatchback and one vehicle that is older than the hatchback.\n\nSince the convertible is older than the tractor, the tractor cannot be the newest. Therefore, the tractor must be older than the hatchback.\n\nThis leaves the convertible as the only vehicle that can be newer than the hatchback. Thus, the order from newest to oldest is:\n1. Convertible\n2. Hatchback\n3. Tractor\n\nTherefore, the newest vehicle is the convertible.\n\nAnswer: (B)"
     }
   ],
-  "o1-2024-12-17-high": []
+  "o1-2024-12-17-med": [],
+  "o1-2024-12-17-high": [],
+  "deepseek-r1": [],
+  "o3-mini-2025-01-31-high": [
+    {
+      "prompt": "Answer the following question. \n\nThe following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a motorcyle, a minivan, and a tractor. The minivan is older than the tractor. The minivan is the second-newest.\nOptions:\n(A) The motorcyle is the newest\n(B) The minivan is the newest\n(C) The tractor is the newest\n\nThen, provide the final answer in the format: \"Answer: (A)\".",
+      "platinum_target": [
+        "(c)"
+      ],
+      "prediction": "(a)",
+      "explanation": "The minivan is the second-newest, which means it occupies the middle position when vehicles are arranged from newest to oldest. Additionally, we know that the minivan is older than the tractor, so the tractor must be the oldest vehicle. This leaves the motorcycle as the only possibility for the newest vehicle.\n\nAnswer: (A)"
+    }
+  ]
 }

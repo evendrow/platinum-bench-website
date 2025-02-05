@@ -73,5 +73,34 @@
   ],
   "deepseek/deepseek-chat": [],
   "Qwen/Qwen2.5-72B-Instruct": [],
-  "o1-2024-12-17-high": []
+  "o1-2024-12-17-med": [],
+  "o1-2024-12-17-high": [],
+  "deepseek-r1": [
+    {
+      "prompt": "Solve the following math word problem.\n\n There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total? \n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "30"
+      ],
+      "prediction": "25",
+      "explanation": "<cot>\nOkay, let's see. So the problem is about 11 friends playing a video game. Then 5 players quit. Each of those players who left had 5 lives. We need to find the total number of lives they had altogether.\n\nWait, first, I need to make sure I understand the question correctly. The key points here are: initially there are 11 friends. Then 5 of them quit. The players who left (the 5) each had 5 lives. The question is asking for the total number of lives those 5 players had combined.\n\nSo, the important numbers here are 5 players and each has 5 lives. So, it's 5 times 5. Let me check again to make sure there's no trick. The initial number of players is 11, but when 5 quit, maybe the problem is trying to distract me with that number. But the question specifically says \"each player left had 5 lives.\" Wait, does \"left\" here mean the ones who remained or the ones who quit? Hmm, that's a possible ambiguity. Let me re-read the problem.\n\nThe problem states: \"If each player left had 5 lives, how many lives did they have total?\" The word \"left\" here could be ambiguous. In English, \"left\" can mean either the ones who departed (quit) or the ones who remained. But the problem says \"when 5 players quit.\" So the players who left (as in exited the game) are the 5. So \"each player left\" (the ones who quit) had 5 lives. So the total is 5 players multiplied by 5 lives each. That would be 25 lives total.\n\nWait, but maybe someone might misinterpret \"left\" as those who stayed. Let me check again. The problem says \"when 5 players quit.\" Then it says \"each player left had 5 lives.\" So after quitting, the remaining players are 11 -5 =6. If \"left\" refers to remaining, then it's 6 players each with 5 lives, which would be 30. But the question is asking about the ones who quit. Let me see the exact wording.\n\nThe problem says: \"how many lives did they have total?\" The \"they\" would refer to the players who left. Because the sentence structure is: when 5 players quit, each player left had 5 lives. Hmm. Wait, maybe the problem is phrased as \"each player left had 5 lives,\" where \"left\" is the past tense of leave, meaning that those who departed (quit) had 5 lives each. So the total lives of the 5 players who left would be 5 *5 =25.\n\nAlternatively, if \"left\" is used as in remaining, then it would be the 6 players each with 5 lives. But the problem states that 5 players quit. So the question is about the total lives of the players who left (quit). Let me check the exact wording again.\n\nOriginal problem: \"There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total?\"\n\nAh, the key is the wording \"each player left had 5 lives.\" The subject here is \"each player left,\" which could be confusing. The word \"left\" here is the past participle of \"leave.\" So \"each player that left had 5 lives.\" That makes sense. So the ones who left (quit) each had 5 lives. Therefore, 5 players times 5 lives each equals 25.\n\nSo the answer should be 25. Let me confirm once more to avoid mistakes. If \"left\" refers to those who remained (left after others quit), then the 11-5=6 players would each have 5 lives, totaling 30. But that interpretation would require the sentence to be \"each player remaining had...\" or \"each player left (remaining) had...\" but in the context, the problem mentions 5 players quit first, then talks about the players left (departed) having 5 lives. So the correct interpretation is that the 5 who quit each had 5 lives. Hence, 5*5=25.\n\nI think that's the correct approach. The problem might be trying to trick you with the initial 11, but the 11 is irrelevant once we're told the 5 players who quit. The answer is 25.\n</cot>\n\nAnswer: 25"
+    }
+  ],
+  "o3-mini-2025-01-31-high": [
+    {
+      "prompt": "Solve the following math word problem.\n\n Nancy uploaded 41 pictures to Facebook. She put 37 pics into one album and put the rest into 2 different albums. How many pictures were in each album? \n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "2"
+      ],
+      "prediction": "37",
+      "explanation": "Nancy uploaded a total of 41 pictures. One album already has 37 pictures, so the remaining pictures are\n\n\u2003\u200341 \u2013 37 = 4.\n\nThese 4 pictures are split equally into 2 albums, so each of these albums gets\n\n\u2003\u20034 \u00f7 2 = 2 pictures.\n\nThus, one album contains 37 pictures, and each of the other two albums contains 2 pictures.\n\nAnswer: 37, 2, 2"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\n Will invited 9 friends to a birthday party, but 4 couldn't come. If he wanted to buy enough cupcakes so each person could have exactly 8, how many should he buy? \n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "48"
+      ],
+      "prediction": "40",
+      "explanation": "Will invited 9 friends, but 4 couldn't come. That means 9 \u2013 4 = 5 friends are coming. Since each person is to have 8 cupcakes, the total cupcakes needed is 5 \u00d7 8 = 40.\n\nAnswer: 40"
+    }
+  ]
 }

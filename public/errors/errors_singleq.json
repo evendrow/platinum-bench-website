@@ -37,5 +37,8 @@
   "gemini-2.0-flash-thinking": [],
   "deepseek/deepseek-chat": [],
   "Qwen/Qwen2.5-72B-Instruct": [],
-  "o1-2024-12-17-high": []
+  "o1-2024-12-17-med": [],
+  "o1-2024-12-17-high": [],
+  "deepseek-r1": [],
+  "o3-mini-2025-01-31-high": []
 }
