@@ -577,7 +577,7 @@ export default function Home() {
 
         <div className="border border-slate-400 rounded-lg my-6 overflow-hidden">
           <div className="font-medium px-6 py-3 bg-slate-200 border-b border-b-slate-400">
-            Example Question
+            Example Question, <span className="font-bold text-slate-600">DROP</span>
             </div>
           <div className="px-6 py-4">
             <p className="mb-4"><i>[context paragraph]</i> What happened second: Russians blocked Azov or Treaty of Constantinople?</p>
@@ -647,7 +647,7 @@ export default function Home() {
 
         <div className="border border-slate-400 rounded-lg my-6 overflow-hidden">
           <div className="font-medium px-6 py-3 bg-slate-200 border-b border-b-slate-400">
-            Example Question
+            Example Question, <span className="font-bold text-slate-600">SVAMP</span>
             </div>
           <div className="px-6 py-4">
             <p className="mb-4">The school is planning a field trip. The school has 67 classrooms. There are 66 students in each classroom in the school. If there are 6 seats on each school bus. How many buses are needed to take the trip?</p>
