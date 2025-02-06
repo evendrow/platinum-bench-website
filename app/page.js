@@ -584,23 +584,58 @@ export default function Home() {
             <div className="font-bold text-green-600 mb-4">Correct Answer: Treaty of Constantinople</div>
             
             <ModelOutput 
-              model="Claude 3.5 Sonnet"
-              reasoning="we can conclude that the Russians blocking Azov happened before the Treaty of Constantinople."
+              model="Claude 3.5 Sonnet (Oct)"
+              // reasoning="...we can conclude that the Russians blocking Azov happened before the Treaty of Constantinople."
               answer="Russians blocked Azov"
               answer_className={'text-red-500'}
             >
+<p className="mb-3">Let's solve this step by step:</p>
+
+<p>1. Let's identify the sequence of events mentioned:</p>
+<p>* Spring 1695: Campaign begins</p>
+<p>* June 27-July 5: Russians blocked Azov</p>
+<p>* August 5: First unsuccessful attack</p>
+<p>* September 25: Second unsuccessful attack</p>
+<p>* October 1: Siege lifted</p>
+<p className="mb-3">* Later: Treaty of Constantinople is mentioned after all these events</p>
+
+<p className="mb-3">2. The Treaty of Constantinople is mentioned at the very end of the passage and is described as the final resolution where "remaining Russians were withdrawn"</p>
+
+<p className="mb-3">3. Therefore, the Russians blocking Azov (June 27-July 5) happened before the Treaty of Constantinople</p>
+            </ModelOutput>
+
+
+            <ModelOutput 
+              model="DeepSeek-R1"
+              // reasoning="...we can conclude that the Russians blocking Azov happened before the Treaty of Constantinople."
+              answer="Russians blocked Azov"
+              answer_className={'text-red-500'}
+            >
+{/* <p className="mb-3">Let's solve this step by step:</p> */}
+{/* <think> */}
+<p className="mb-3">Okay, let's see. The question is asking what happened second between the Russians blocking Azov and the Treaty of Constantinople.</p>
+<p className="mb-3">First, I need to look at the context provided. The first event mentioned is the Azov campaign starting in spring 1695. Then, between June 27-July 5, the Russians blocked Azov from land but couldn't control the river. After some attacks and the siege being lifted on October 1. Then there's another army under Sheremetev taking some forts, but couldn't hold the area. Finally, by the Treaty of Constantinople, the remaining Russians withdrew and the lower Dnieper became a demilitarized zone.</p>
+<p className="mb-3">So the order is: Russians blocked Azov (June-July 1695), then later the Treaty of Constantinople. Since the Treaty is mentioned after the events of the campaign, which happened in 1695, and the treaty would logically come after the military actions. The context says "By the Treaty of Constantinople the remaining Russians were withdrawn..." which suggests the treaty occurred after the military campaigns, including the blocking of Azov. So the blocking of Azov happened first, then the Treaty later.</p>
+{/* </think> */}
             </ModelOutput>
             
             <ModelOutput 
-              model="Mistral Small"
-              reasoning="...Therefore, the Russians blocked Azov first, and the Treaty of Constantinople was signed later."
+              model="Mistral Large"
+              // reasoning="...Therefore, the Russians blocked Azov first, and the Treaty of Constantinople was signed later."
               answer="The Russians blocked Azov second"
               answer_className={'text-red-500'}
-            />
+            >
+<p className="mb-3">Let's think through this step-by-step:</p>
+
+<p>1. The context mentions that the Russians blocked Azov from land between June 27 and July 5, 1695.</p>
+<p className="mb-3">2. The Treaty of Constantinople is mentioned after the events of 1695, implying it happened later.</p>
+
+<p className="mb-3">Therefore, the Russians blocking Azov happened first.</p>
+              </ModelOutput>
             
             <ModelOutput 
-              model="Gemini 1.5 Pro"
-              reasoning="...Since the Treaty of Constantinople followed the events at Azov and the Dnieper campaign, the blockade of Azov happened first."
+              model="Gemini 2.0 Flash"
+              reasoning="The context states that the Russians blocked Azov between June 27 and July 5. Then, it says that after the Russians were not able to hold the area, they withdrew and the Treaty of Constantinople was signed. Therefore, the blocking of Azov happened first."
               answer="Russians blocked Azov"
               answer_className={'text-red-500'}
             />
@@ -619,7 +654,7 @@ export default function Home() {
             <div className="font-bold text-green-600 mb-4">Correct Answer: 737</div>
             
             <ModelOutput 
-              model="Claude 3.5 Sonnet"
+              model="Claude 3.5 Sonnet (June)"
               reasoning="" //To find the number of buses needed, we divide the total number of students by the number of seats per bus: 4,422 ÷ 6 = 737. However, since we can't have a fraction of a bus, we need to round up to the next whole number to ensure all students have a seat."
               answer="738"
               answer_className={'text-red-500'}
