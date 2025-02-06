@@ -170,16 +170,16 @@ export default function Home() {
     // });
     // const avg_accuracy = accuracies.reduce((a, b) => a + b, 0) / accuracies.length;
     // return 2;
-    console.log(model_name, model_name_to_key[model_name], model_score[model_name_to_key[model_name]]);
+    // console.log(model_name, model_name_to_key[model_name], model_score[model_name_to_key[model_name]]);
     return model_score[model_name_to_key[model_name]];
   });
-  console.log(avg_accuracy_per_model);
+  // console.log(avg_accuracy_per_model);
 
 
   // const data = results;
   const accuracy_order_index = avg_accuracy_per_model.map((_, i) => i).sort((a, b) => avg_accuracy_per_model[a] - avg_accuracy_per_model[b]);
   const data = results;
-  console.log(accuracy_order_index);
+  // console.log(accuracy_order_index);
 
   const model_names = models;
   const model_names_sorted = accuracy_order_index.map(i => model_names[i]);
