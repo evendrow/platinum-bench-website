@@ -246,11 +246,11 @@ export default function Home() {
           <p className="text-sm mb-5">*Equal contribution. †Equal advising.</p>
 
           <div className="inline-flex">
-            <OutlineButtonWithURL>
+            <OutlineButtonWithURL url={"https://arxiv.org/abs/2502.03461"}>
               <Icons.FileEarmarkPdf className="w-4 h-4 inline-block mr-1" />
               Paper
             </OutlineButtonWithURL>
-            <OutlineButtonWithURL>
+            <OutlineButtonWithURL >
               <Icons.PencilFill className="w-4 h-4 inline-block mr-2" />
               Blog
             </OutlineButtonWithURL>
