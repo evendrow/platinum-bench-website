@@ -250,7 +250,7 @@ export default function Home() {
               <Icons.FileEarmarkPdf className="w-4 h-4 inline-block mr-1" />
               Paper
             </OutlineButtonWithURL>
-            <OutlineButtonWithURL >
+            <OutlineButtonWithURL url={"https://gradientscience.org/platinum-benchmarks/"} >
               <Icons.PencilFill className="w-4 h-4 inline-block mr-2" />
               Blog
             </OutlineButtonWithURL>
