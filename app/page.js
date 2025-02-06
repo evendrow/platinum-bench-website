@@ -254,7 +254,7 @@ export default function Home() {
               <Icons.PencilFill className="w-4 h-4 inline-block mr-2" />
               Blog
             </OutlineButtonWithURL>
-            <OutlineButtonWithURL url={"https://github.com/MadryLab/platinum-bench"}>
+            <OutlineButtonWithURL url={"https://github.com/MadryLab/platinum-benchmarks"}>
               <Icons.Github className="w-4 h-4 inline-block mr-1" />
               Code
             </OutlineButtonWithURL>
