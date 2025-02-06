@@ -432,7 +432,7 @@ export default function Home() {
             ))}
 
             <div className="mt-3 italics text-sm font-medium text-slate-700">
-              Number of errors per model on each benchmark. The score is the average error rate, equally weighted across categories.
+              Number of errors per model on each platinum benchmark. The score is the average error rate, equally weighted across categories.
             </div>
             
           </div>
