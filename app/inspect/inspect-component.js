@@ -55,6 +55,8 @@ function InspectPageContents() {
         'o1-2024-12-17-med',
         'o1-2024-12-17-high',
         'o3-mini-2025-01-31-high',
+        'gemini-2.0-pro-02-05',
+        'Qwen2.5-Max'
     ]
     const key_to_model_name = Object.fromEntries(Object.entries(model_name_to_key).map(([key, value]) => [value, key]))
     
