@@ -876,5 +876,57 @@
       "prediction": "720",
       "explanation": "To solve the problem, add the number of cookies baked on each day:\n\nDay before yesterday: 419 cookies\nYesterday: 31 cookies\nThis morning: 270 cookies\n\nTotal = 419 + 31 + 270 = 720\n\nAnswer: 720"
     }
+  ],
+  "gemini-2.0-pro-02-05": [
+    {
+      "prompt": "Solve the following math word problem.\n\nNext on his checklist is wax to stick the feathers together and colors to paint them. He needs a total of 57 g of colors to paint them. He needs 22 g of wax more. If the feathers require a total of 353 g of wax\nHow many grams of wax does he already have?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "331"
+      ],
+      "prediction": "274",
+      "explanation": "1.  The problem states he needs 22 g *more* wax than colors.\n2.  He needs 57 g of colors.\n3.  Therefore, the total wax needed is 57 g + 22 g = 79 g.\n4.  The problem also states that the feathers require a total of 353 g of wax.\n5. The question asks how much wax does he already have.\n6. So, we have the equation: 79g + wax_already_have = 353g\n7. Subtracting 79g from both sides, we get: wax_already_have = 353g - 79g\n8. wax_already_have = 274g\n\nAnswer: 274\n"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nAfter eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 92 visitors came to the Buckingham palace that day. If there were 419 visitors the previous day and 103 visitors the day before that\nHow many visited the Buckingham palace before that day?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "522"
+      ],
+      "prediction": "103",
+      "explanation": "Here's how to solve the problem step-by-step:\n\n1.  **Identify the knowns:**\n    *   Visitors today: 92\n    *   Visitors the previous day: 419\n    *   Visitors the day before that: 103\n\n2.  **The Question:**\n    *   The question asks how many people visited \"before that day\". \"That day\" refers to the day 103 visitors came. The question does not require any calculation.\n\n3.  **Answer:**\n    The question is a trick. It is already answered.\n\nAnswer: 103\n"
+    }
+  ],
+  "Qwen2.5-Max": [
+    {
+      "prompt": "Solve the following math word problem.\n\nMarco and his dad went strawberry picking. Together they collected strawberries that weighed 22 pounds. On the way back Marco ' dad found 30 more pounds of strawberries. Marco's strawberries now weighed 36 pounds.\nHow much did his dad's strawberries weigh now?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "16"
+      ],
+      "prediction": "parsing error",
+      "explanation": "Let's break down the problem step-by-step:\n\n1. **Initial Collection**:  \n   Marco and his dad initially collected strawberries that weighed **22 pounds** together.\n\n2. **Additional Strawberries Found**:  \n   On the way back, Marco's dad found **30 more pounds** of strawberries. This means the total weight of strawberries increased by 30 pounds.\n\n3. **Marco's Strawberries Now**:  \n   After finding the additional strawberries, Marco's strawberries now weigh **36 pounds**.\n\n4. **Determine Marco's Initial Strawberries**:  \n   Let the weight of Marco's strawberries initially be $ M $.  \n   Since the total initial weight was 22 pounds, the weight of his dad's strawberries initially was $ 22 - M $.\n\n5. **Marco's Strawberries After the Addition**:  \n   Marco's strawberries now weigh 36 pounds. This means Marco did not pick up any of the 30 additional pounds found by his dad. Therefore, Marco's strawberries remained the same as his initial collection:  \n   $$\n   M = 36 \\, \\text{pounds}.\n   $$\n\n6. **Dad's Strawberries Now**:  \n   The dad initially had $ 22 - M $ pounds of strawberries. Substituting $ M = 36 $, we find:  \n   $$\n   \\text{Dad's initial strawberries} = 22 - 36 = -14 \\, \\text{pounds}.\n   $$"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nAfter eating a hearty meal they went to see the Buckingham palace. There, Rachel learned that 92 visitors came to the Buckingham palace that day. If there were 419 visitors the previous day and 103 visitors the day before that\nHow many visited the Buckingham palace before that day?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "522"
+      ],
+      "prediction": "parsing error",
+      "explanation": "To solve this problem, let's break it down step-by-step:\n\n1. **Understand the problem**:  \n   We are given the number of visitors to Buckingham Palace on three specific days:\n   - 92 visitors on the current day.\n   - 419 visitors the previous day.\n   - 103 visitors the day before that.\n\n   We are tasked with finding the number of visitors **before the day with 103 visitors**.\n\n2. **Define the sequence of days**:  \n   Let\u2019s denote the days as follows:\n   - Day 1: The day with 103 visitors.\n   - Day 2: The day with 419 visitors.\n   - Day 3: The day with 92 visitors.\n   - Day 0: The day before Day 1 (this is what we need to find).\n\n3. **Identify the pattern or relationship**:  \n   The problem does not explicitly state a pattern or relationship between the number of visitors on different days. However, based on the phrasing of the question, it seems we are simply being asked to find the number of visitors on Day 0, which is **not provided directly**. This implies that the problem might involve subtraction or another operation to infer the missing value.\n\n4. **Solve for Day 0**:  \n   Since the problem doesn\u2019t specify a mathematical relationship, we assume the simplest interpretation: the number of visitors on Day 0 is **independent** of the other days and must be explicitly calculated or inferred. However, no additional data is provided to calculate this value.\n\n   Therefore, the problem is ambiguous, and we cannot determine the exact number of visitors on Day 0 without further clarification.\n\nAnswer: Cannot be determined"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nDan has $ 2. He bought some candy bar for $ 6 each one costing $ 3.\nHow many candy bar did he buy?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "2"
+      ],
+      "prediction": "0",
+      "explanation": "Let's solve this step-by-step:\n\n1. **Understand the problem**:  \n   Dan has $2, but he buys candy bars that cost $3 each. The problem states that each candy bar costs $6, but this seems inconsistent. We will assume the correct cost of each candy bar is $3, as the problem mentions \"each one costing $3.\"\n\n2. **Analyze the situation**:  \n   Dan has $2, but each candy bar costs $3. This means Dan does not have enough money to buy even one candy bar, as $2 is less than $3.\n\n3. **Calculate how many candy bars Dan can buy**:  \n   To determine how many candy bars Dan can buy, divide the total money Dan has ($2) by the cost of one candy bar ($3):  \n   $$\n   \\text{Number of candy bars} = \\frac{\\text{Total money Dan has}}{\\text{Cost of one candy bar}} = \\frac{2}{3}.\n   $$  \n   Since Dan cannot buy a fraction of a candy bar, the result is 0.\n\n4. **Final answer**:  \n   Dan cannot buy any candy bars because he does not have enough money.\n\nAnswer: 0"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nBrenda's mother made cookies for 10 guests but 9 guests did not come. If she prepared 18 cookies and each guest had the same number of cookies\nHow many did each of them have?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "18"
+      ],
+      "prediction": "9",
+      "explanation": "Let's solve this step-by-step:\n\n1. **Understand the problem**:\n   - Brenda's mother prepared 18 cookies.\n   - She expected 10 guests, but only 1 guest showed up (since 9 guests did not come).\n   - Each guest (including Brenda, presumably) gets the same number of cookies.\n\n2. **Determine how many people are sharing the cookies**:\n   - There are 10 expected guests, but only 1 guest arrived.\n   - Including Brenda, there are **2 people** in total (Brenda + the 1 guest).\n\n3. **Divide the cookies equally**:\n   - The total number of cookies is 18.\n   - These cookies are divided equally among the 2 people.\n   - Each person gets:  \n     $$\n     \\frac{18}{2} = 9\n     $$\n\n4. **Final Answer**:\n   Each person gets 9 cookies.\n\nAnswer: 9"
+    }
   ]
 }

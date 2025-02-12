@@ -87,20 +87,23 @@
   ],
   "o3-mini-2025-01-31-high": [
     {
-      "prompt": "Solve the following math word problem.\n\n Nancy uploaded 41 pictures to Facebook. She put 37 pics into one album and put the rest into 2 different albums. How many pictures were in each album? \n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
-      "platinum_target": [
-        "2"
-      ],
-      "prediction": "37",
-      "explanation": "Nancy uploaded a total of 41 pictures. One album already has 37 pictures, so the remaining pictures are\n\n\u2003\u200341 \u2013 37 = 4.\n\nThese 4 pictures are split equally into 2 albums, so each of these albums gets\n\n\u2003\u20034 \u00f7 2 = 2 pictures.\n\nThus, one album contains 37 pictures, and each of the other two albums contains 2 pictures.\n\nAnswer: 37, 2, 2"
-    },
-    {
       "prompt": "Solve the following math word problem.\n\n Will invited 9 friends to a birthday party, but 4 couldn't come. If he wanted to buy enough cupcakes so each person could have exactly 8, how many should he buy? \n\nThen, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
       "platinum_target": [
         "48"
       ],
       "prediction": "40",
       "explanation": "Will invited 9 friends, but 4 couldn't come. That means 9 \u2013 4 = 5 friends are coming. Since each person is to have 8 cupcakes, the total cupcakes needed is 5 \u00d7 8 = 40.\n\nAnswer: 40"
+    }
+  ],
+  "gemini-2.0-pro-02-05": [],
+  "Qwen2.5-Max": [
+    {
+      "prompt": "Solve the following math word problem.\n\n There were 11 friends playing a video game online when 5 players quit. If each player left had 5 lives, how many lives did they have total? \n\nThink step-by-step. Then, provide the final answer as a single number in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "30"
+      ],
+      "prediction": "25",
+      "explanation": "Let's solve this step-by-step:\n\n1. Initially, there were 11 friends playing the game.\n2. Out of these, 5 players quit the game.\n3. Each player who quit had 5 lives.\n4. To find the total number of lives the players who quit had, we multiply the number of players who quit by the number of lives each player had:\n   $$\n   5 \\text{ players} \\times 5 \\text{ lives per player} = 25 \\text{ lives}.\n   $$\n\nThus, the total number of lives the players who quit had is 25.\n\nAnswer: 25"
     }
   ]
 }

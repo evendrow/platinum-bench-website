@@ -498,5 +498,16 @@
       "prediction": "(a)",
       "explanation": "The minivan is the second-newest, which means it occupies the middle position when vehicles are arranged from newest to oldest. Additionally, we know that the minivan is older than the tractor, so the tractor must be the oldest vehicle. This leaves the motorcycle as the only possibility for the newest vehicle.\n\nAnswer: (A)"
     }
+  ],
+  "gemini-2.0-pro-02-05": [],
+  "Qwen2.5-Max": [
+    {
+      "prompt": "Answer the following question. \n\nThe following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a motorcyle, a bus, and a tractor. The motorcyle is the oldest. The bus is newer than the tractor.\nOptions:\n(A) The motorcyle is the second-newest\n(B) The bus is the second-newest\n(C) The tractor is the second-newest\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: (A)\".",
+      "platinum_target": [
+        "(c)"
+      ],
+      "prediction": "(b)",
+      "explanation": "To determine the correct answer, let's analyze the information provided step-by-step:\n\n1. **The motorcycle is the oldest**:  \n   This means the motorcycle is not the second-newest or the newest. It must be the first in terms of age, i.e., it was made before both the bus and the tractor.\n\n2. **The bus is newer than the tractor**:  \n   This means the tractor is older than the bus. Therefore, the tractor cannot be the newest, and the bus cannot be the oldest.\n\n3. **Order of the vehicles by age**:  \n   - The motorcycle is the oldest.  \n   - The tractor is older than the bus, so the tractor is the second-oldest, and the bus is the newest.\n\n4. **Determine the second-newest**:  \n   - The motorcycle is the oldest, so it cannot be the second-newest.  \n   - The tractor is older than the bus, so the tractor cannot be the second-newest.  \n   - The bus, being newer than the tractor, must be the second-newest.\n\nThus, the correct answer is:  \n**Answer: (B)**"
+    }
   ]
 }
