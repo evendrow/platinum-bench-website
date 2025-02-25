@@ -319,7 +319,7 @@ export default function Home() {
             {model_names_sorted.map((model_name, index) => (
               <div key={index} className="h-10 my-0 me-2 flex justify-center">
                 <DatasetName>
-                  <div className="text-md font-bold text-slate-700">
+                  <div className="text-md font-bold text-slate-700 leading-none">
                     {model_name}
                   </div>
                   {/* <div className="text-slate-700 text-xs italic">{dataset.description}</div> */}
