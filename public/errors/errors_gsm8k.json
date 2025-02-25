@@ -1122,5 +1122,41 @@
       "prediction": "3",
       "explanation": "To solve this problem, let's break it down step-by-step:\n\n1. **Determine the total weight of 80 flagstones**:\n   - Each flagstone weighs 75 pounds.\n   - The total weight of 80 flagstones is:\n     $$\n     80 \\times 75 = 6000 \\text{ pounds.}\n     $$\n\n2. **Determine the capacity of one truck**:\n   - Each truck can carry a maximum of 2000 pounds.\n\n3. **Calculate the number of trucks needed**:\n   - To find the number of trucks required, divide the total weight of the flagstones by the capacity of one truck:\n     $$\n     \\frac{6000}{2000} = 3.\n     $$\n   - Since 6000 pounds is exactly divisible by 2000 pounds, exactly 3 trucks are needed.\n\n4. **Verify the solution**:\n   - If 3 trucks are used, each carrying 2000 pounds, the total weight transported is:\n     $$\n     3 \\times 2000 = 6000 \\text{ pounds,}\n     $$\n     which matches the total weight of the 80 flagstones.\n\nThus, the number of trucks needed is:\n\nAnswer: 3"
     }
+  ],
+  "claude-3-7-sonnet-20250219": [
+    {
+      "prompt": "Solve the following math word problem.\n\nA company pays each of its employees $600 in a month. The company has a policy of increasing the salaries of each of its employees by 10% of the initial salary every year for those who've stayed in the company for five years. If Sylvie just clocked 5 years in the company last December, what's her annual salary after three more years of service?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "9360"
+      ],
+      "prediction": "10080",
+      "explanation": "I'll solve this step-by-step.\n\nFirst, let me identify what we know:\n- Initial monthly salary: $600\n- After 5 years: 10% increase on initial salary\n- We need to find Sylvie's annual salary after 3 more years (so 8 years total)\n\nStep 1: Calculate Sylvie's monthly salary after 5 years.\nInitial monthly salary = $600\nIncrease after 5 years = 10% of $600 = 0.10 \u00d7 $600 = $60\nMonthly salary after 5 years = $600 + $60 = $660\n\nStep 2: Calculate Sylvie's monthly salary after 6 years.\nIncrease after 6 years = 10% of $600 = $60\nMonthly salary after 6 years = $660 + $60 = $720\n\nStep 3: Calculate Sylvie's monthly salary after 7 years.\nIncrease after 7 years = 10% of $600 = $60\nMonthly salary after 7 years = $720 + $60 = $780\n\nStep 4: Calculate Sylvie's monthly salary after 8 years.\nIncrease after 8 years = 10% of $600 = $60\nMonthly salary after 8 years = $780 + $60 = $840\n\nStep 5: Convert the monthly salary to annual salary.\nAnnual salary after 8 years = $840 \u00d7 12 = $10,080\n\nAnswer: 10080"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nTwenty dozen cups cost $1200 less than the total cost of half a dozen plates sold at $6000 each. Calculate the total cost of buying each cup.\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "145"
+      ],
+      "prediction": "70",
+      "explanation": "I'll solve this step-by-step.\n\nFirst, let me identify what we know:\n- Twenty dozen cups cost $1200 less than half a dozen plates at $6000 each\n- We need to find the cost of each cup\n\nStep 1: Calculate the cost of half a dozen plates.\nHalf a dozen = 6 \u00f7 2 = 3 plates\nCost of 3 plates = 3 \u00d7 $6000 = $18,000\n\nStep 2: Calculate the cost of twenty dozen cups.\nSince twenty dozen cups cost $1200 less than $18,000:\nCost of twenty dozen cups = $18,000 - $1200 = $16,800\n\nStep 3: Calculate how many cups are in twenty dozen.\nTwenty dozen = 20 \u00d7 12 = 240 cups\n\nStep 4: Calculate the cost of each cup.\nCost per cup = Total cost \u00f7 Number of cups\nCost per cup = $16,800 \u00f7 240 = $70\n\nAnswer: 70"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nA landscaping company is delivering flagstones to a customer\u2019s yard. Each flagstone weighs 75 pounds. If the delivery trucks can carry a total weight of 2000 pounds, how many trucks will be needed to transport 80 flagstones in one trip?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "4"
+      ],
+      "prediction": "3",
+      "explanation": "I need to determine how many trucks are needed to transport 80 flagstones, where each flagstone weighs 75 pounds and each truck can carry 2000 pounds.\n\nStep 1: Calculate the total weight of all flagstones.\nTotal weight = Number of flagstones \u00d7 Weight per flagstone\nTotal weight = 80 \u00d7 75 pounds\nTotal weight = 6000 pounds\n\nStep 2: Calculate how many trucks are needed.\nNumber of trucks = Total weight \u00f7 Weight capacity per truck\nNumber of trucks = 6000 pounds \u00f7 2000 pounds\nNumber of trucks = 3\n\nAnswer: 3"
+    }
+  ],
+  "claude-3-7-sonnet-20250219-thinking": [
+    {
+      "prompt": "Solve the following math word problem.\n\nA landscaping company is delivering flagstones to a customer\u2019s yard. Each flagstone weighs 75 pounds. If the delivery trucks can carry a total weight of 2000 pounds, how many trucks will be needed to transport 80 flagstones in one trip?\n\nThen, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "4"
+      ],
+      "prediction": "3",
+      "explanation": "To solve this problem, I need to find how many trucks are needed to transport all the flagstones.\n\nStep 1: Calculate the total weight of all flagstones.\nTotal weight = Number of flagstones \u00d7 Weight per flagstone\nTotal weight = 80 \u00d7 75 pounds\nTotal weight = 6,000 pounds\n\nStep 2: Determine how many trucks are needed based on each truck's capacity.\nNumber of trucks = Total weight \u00f7 Weight capacity per truck\nNumber of trucks = 6,000 pounds \u00f7 2,000 pounds\nNumber of trucks = 3\n\nAnswer: 3"
+    }
   ]
 }
