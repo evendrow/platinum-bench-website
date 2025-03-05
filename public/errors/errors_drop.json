@@ -1855,5 +1855,27 @@
       "prediction": "3",
       "explanation": "Based on the information provided in the context, I can identify the following field goals:\n\n1. Two field goals mentioned in this sentence: \"The Dolphins and Colts kept going back and forth at each other with two field goals by Dan Carpenter and Adam Vinatieri to make the score 13-13 at halftime.\" This indicates one field goal by Carpenter and one by Vinatieri.\n\n2. One more field goal described here: \"Miami than hit a 45-yard field goal by Dan Carpenter.\"\n\nAdding these up, there were 3 field goals made in the game - 2 by Dan Carpenter of the Dolphins and 1 by Adam Vinatieri of the Colts.\n\nAnswer: 3"
     }
+  ],
+  "gpt-4.5-preview-2025-02-27": [
+    {
+      "prompt": "Answer the question using the information in the context.\n\nContext: Charles V returned to Spain on July 16, 1522.  Acts of repression and retaliation against former comuneros did occur, but only sporadically.  Embarrassingly large numbers of important people had supported the comuneros, or at least were suspiciously slow to declare allegiance to the king, and Charles thought it unwise to press the issue too much. Back in Valladolid, Charles declared a general pardon on November 1.  The pardon gave amnesty to everyone involved in the revolt with the exception of 293 comuneros, a small figure given the huge number of rebels.  Both Pacheco and Bishop Acu\u00f1a were among the 293 excluded from the pardon.  More pardons were issued later, after pressure from the Cortes; by 1527, the repression was completely at end.  Of the 293, 23 were executed, 20 died in prison, 50 purchased amnesty, and 100 were pardoned later.  The fates of the rest are unknown.\n\nQuestion: How many people weren't pardoned later of the 293 comuneros?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word.",
+      "platinum_target": [
+        "193",
+        "193 people"
+      ],
+      "prediction": "100",
+      "explanation": "Step-by-step reasoning:\n\n1. Initially, 293 comuneros were excluded from the general pardon.\n2. Of these 293:\n   - 23 were executed.\n   - 20 died in prison.\n   - 50 purchased amnesty.\n   - 100 were pardoned later.\n3. Adding these numbers up: 23 + 20 + 50 + 100 = 193.\n4. To find how many were never pardoned, we subtract those accounted for (193) from the original 293:\n   293 - 193 = 100.\n5. The fates of these remaining 100 individuals are unknown, and they were never explicitly pardoned.\n\nAnswer: 100"
+    },
+    {
+      "prompt": "Answer the question using the information in the context.\n\nContext: After a miserable loss to the Atlanta Falcons, the Dolphins host their home opener to the Indianapolis Colts. On the first play from scrimmage, Peyton Manning threw an 80-yard touchdown pass to tight end Dallas Clark. The Dolphins answered with a 14-yard touchdown run by Ronnie Brown out of the Wildcat Offense. The Dolphins and Colts kept going back and forth at each other with two field goals by Dan Carpenter and Adam Vinatieri to make the score 13-13 at halftime. After a scoreless third quarter, Ronnie Brown ran 2-yards for a touchdown to put Miami up 20-13. The Colts answered back with a 15-yard touchdown run by rookie running back Donald Brown. Miami than hit a 45-yard field goal by Dan Carpenter. But the Colts took the lead thanks to a 48-yard touchdown pass to Pierre Gar&#231;on. The Dolphins tried to rally at the end of the game but Chad Pennington was intercepted by Antoine Bethea to sucure the Colts victory. The Colts won the game 27-23 as the Dolphins dropped to 0-2. The Dolphins dominated the game in the time of possession battle, but lost the game with almost 50 minutes of offensive possession.\n\nQuestion: How many field goals were made?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word.",
+      "platinum_target": [
+        "5",
+        "5 field goals",
+        "five",
+        "five field goals"
+      ],
+      "prediction": "3",
+      "explanation": "Step-by-step analysis:\n\n1. First half: Two field goals were mentioned explicitly, one by Dan Carpenter and one by Adam Vinatieri.  \n2. Second half: Another field goal was explicitly mentioned: a 45-yard field goal by Dan Carpenter.\n\nThus, the total number of field goals made in the game is 3.\n\nAnswer: 3"
+    }
   ]
 }

@@ -59,6 +59,7 @@ function InspectPageContents() {
         'Qwen2.5-Max',
         'claude-3-7-sonnet-20250219',
         'claude-3-7-sonnet-20250219-thinking',
+        'gpt-4.5-preview-2025-02-27'
     ]
     const key_to_model_name = Object.fromEntries(Object.entries(model_name_to_key).map(([key, value]) => [value, key]))
     
