@@ -61,55 +61,35 @@ function InspectPageContents() {
         'claude-3-7-sonnet-20250219-thinking',
         'gpt-4.5-preview-2025-02-27'
     ]
+    const model_names_gsm8k_platinum = [
+      'meta-llama/Meta-Llama-3.1-405B-Instruct',
+      'gpt-4o-2024-11-20',
+      'claude-3-5-sonnet-20241022',
+      'gemini-2.0-flash-thinking-01-21',
+      'deepseek-r1',
+      'o1-2024-12-17-med',
+      'o1-2024-12-17-high',
+      'o3-mini-2025-01-31-high',
+      'gemini-2.0-pro-02-05',
+      'claude-3-7-sonnet-20250219',
+      'claude-3-7-sonnet-20250219-thinking',
+      'gpt-4.5-preview-2025-02-27'
+    ]
     const key_to_model_name = Object.fromEntries(Object.entries(model_name_to_key).map(([key, value]) => [value, key]))
+    key_to_model_name['gemini-2.0-flash-thinking-01-21'] = 'Gemini 2.0 Flash Thinking (01/21)';
     
 
-    // const metadata = [{
-    //     name: 'MMLU Math',
-    //     key: 'mmlu_math',
-    //     description: 'High school math',
-    //     difficulty: 'High School',
-    //     accuracy: [null, null, 91.9, 92.9, 98.0, 100, 100, 100, 100, 100],
-    //     count: 197,
-    //   }, {
-    //     name: 'GSM8K',
-    //     key: 'gsm8k',
-    //     description: '8th-grade math word problems',
-    //     difficulty: 'Middle School',
-    //     accuracy: [null, null, 98.2, 98.9, 98.9, 100, 100, 100, 100, 100],
-    //     count: 284,
-    //   }, {
-    //     name: 'SVAMP',
-    //     key: 'svamp',
-    //     description: 'Elementary-level math word problems',
-    //     difficulty: 'Elementary School',
-    //     accuracy: [null, null, 97.8, 98.5, 99.6, 100, 100, 100, 100, 100],
-    //     count: 270,
-    //   }, {
-    //     name: 'MultiArith',
-    //     key: 'math_eval__multiarith',
-    //     description: 'Simple multi-step arithmetic word problems',
-    //     difficulty: 'Elementary School',
-    //     accuracy: [96.0, 100.0, 98.0, 100.0, 99.0, 100, 100, 100, 100, 100],
-    //     count: 100
-    //   }, {
-    //     name: 'SingleEq',
-    //     key: 'math_eval__singleq',
-    //     description: 'Single equation word problems',
-    //     difficulty: 'Elementary School',
-    //     accuracy: [97.0, 100.0, 100.0, 100.0, 100.0, 100, 100, 100, 100, 100],
-    //     count: 100
-    //   }, {
-    //     name: 'SingleOp',
-    //     key: 'math_eval__singleop',
-    //     description: 'Single operation arithmetic word problems',
-    //     difficulty: 'Early Elementary School',
-    //     accuracy: [99.0, 100.0, 100.0, 100.0, 100.0, 100, 100, 100, 100, 100],
-    //     count: 99
-    //   }
-    //   ]
 
-    const metadata = results;
+    const metadata = [
+      {
+          'name': '(NEW) GSM8K Full Test Set',
+          'key': 'gsm8k_full',
+          'type': 'Math',
+          'description': 'Full GSM8K-Platinum test set',
+      }
+  ].concat(results)
+    console.log(metadata)
+    console.log(results)
 
     const searchParams = useSearchParams();
     const pathname = usePathname();
@@ -222,7 +202,7 @@ function InspectPageContents() {
             </h1>
             <div className="text-md">Pick a model to view errors for:</div>
             <div className="mt-0">
-              {model_names.map((model_name, index) => (
+              {(dataset == 'gsm8k_full' ? model_names_gsm8k_platinum : model_names).map((model_name, index) => (
                 <div key={index}
                   className={
                     `inline-block px-0.5 py-0 rounded-lg  mx-0.5 mt-1 text-sm ` +

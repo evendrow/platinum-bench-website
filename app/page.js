@@ -230,6 +230,10 @@ export default function Home() {
 
         <div className="text-center">
 
+          <div className="bg-sky-500 text-white text-lg font-medium rounded-lg px-8 py-2 mb-8 inline-block">
+          🚀  We just released <b>GSM8K-Platinum</b>! Check out our blog post <a href="https://gradientscience.org/gsm8k-platinum/" target="_blank" className="underline font-bold">here</a>.
+          </div>
+
           <h1 className="text-3xl md:text-6xl mb-8 font-serif font-medium leading-normal md:leading-normal">Do Large Language Model  <br /> Benchmarks Test Reliability?</h1>
 
           {/* Header Section
