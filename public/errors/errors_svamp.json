@@ -329,14 +329,6 @@
       "explanation": "Let's break down the problem step-by-step.\n\n1. Rebecca wants to split her collection of eggs into groups of 11.\n2. Each group has 2 eggs.\n\nHowever, there seems to be a misunderstanding in the wording of the problem. If each group has 2 eggs, it cannot also be that she splits them into groups of 11. \n\nLet's clarify: if Rebecca is splitting her eggs into groups of 11, and if there are 2 eggs in each group, it doesn't make sense as it contradicts the grouping.\n\nSo, let's assume she wants to know how many eggs she would have if she has groups of 11, but with 2 eggs per group, we can set it up as follows:\n\n- If she has groups of 11, and each group has 2 eggs, the total number of eggs can be calculated by multiplying the number of groups by the number of eggs per group.\n\nHowever, without knowing the number of groups, we cannot directly calculate the total number of eggs.\n\nInstead, if we interpret the problem such that she has a total number of eggs that can be divided into groups of 11, we can say:\n\nLet \\( x \\) be the total number of eggs.\n\n- If she splits the eggs into groups of 11, the total number of eggs must be \\( 11n \\) where \\( n \\) is the number of groups.\n\nTo satisfy the condition of having 2 eggs per group, we can say:\n\n- If she has \\( n \\) groups, then \\( x = 11n \\) and since she has 2 eggs per group, the total number of eggs would also be \\( 2n \\).\n\nTo find \\( x \\), we need \\( 11n = 2n \\), which cannot happen unless \\( n = 0 \\).\n\nThus, we can conclude that the only way to satisfy the condition of having groups of 11 and 2 eggs per group is to have no eggs.\n\nSo Rebecca has:\n\nAnswer: 0"
     },
     {
-      "prompt": "Solve the following math word problem.\n\nDuring summer break 907611 kids from Lawrence county stay home and the other 455682 kids go to camp.\nAbout how many kids are in Lawrence county?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
-      "platinum_target": [
-        "1363293"
-      ],
-      "prediction": "1368293",
-      "explanation": "To find the total number of kids in Lawrence county, we need to add the number of kids who stay home to the number of kids who go to camp.\n\n1. Number of kids who stay home: 907611\n2. Number of kids who go to camp: 455682\n\nNow, we will add these two numbers together:\n\n907611 + 455682 = 1368293\n\nThus, the total number of kids in Lawrence county is 1368293.\n\nFinal answer: Answer: 1368293"
-    },
-    {
       "prompt": "Solve the following math word problem.\n\nLewis earns $ 368 every week during the 1359 weeks of harvest. If he has to pay $ 388 rent every week\nHow much money does he pay as rent during the harvest season?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
       "platinum_target": [
         "527292"
@@ -867,5 +859,43 @@
   ],
   "claude-3-7-sonnet-20250219": [],
   "claude-3-7-sonnet-20250219-thinking": [],
-  "gpt-4.5-preview-2025-02-27": []
+  "gpt-4.5-preview-2025-02-27": [],
+  "gemini-2.5-pro-exp-03-25": [],
+  "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8": [
+    {
+      "prompt": "Solve the following math word problem.\n\nRebecca wants to split a collection of eggs into groups of 11. If each group has 2 eggs\nHow many eggs does Rebecca have?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "22"
+      ],
+      "prediction": "2",
+      "explanation": "To solve this problem, let's analyze the information given step by step.\n\n1. Rebecca is splitting a collection of eggs into groups of 11.\n2. Each group has 2 eggs.\n\nHowever, the statement \"each group has 2 eggs\" seems to contradict the statement \"split a collection of eggs into groups of 11\" because if the groups are of 11, it implies that each group should have 11 eggs, not 2.\n\nLet's reinterpret the information given in a way that makes mathematical sense:\n\nIf we are to take the problem at face value and assume there's a typographical error or misunderstanding in the problem statement regarding the size of the groups, we have two possible interpretations:\n\n1. The groups are of 11, and we need to figure out how many eggs Rebecca has based on some other information.\n2. The statement about \"each group has 2 eggs\" is incorrect or misplaced if we're discussing groups of 11.\n\nHowever, directly from the information given:\n\n- If Rebecca has groups of 11 and each of these somehow \"has 2 eggs,\" it could imply that there are 2 eggs in each group of 11, which doesn't make sense under normal circumstances. \n\nLet's directly calculate based on a possible logical reinterpretation that could fit the numbers given:\n\nIf we were to ignore the \"groups of 11\" and just consider the \"2 eggs\" per group, without a clear number of groups, we can't directly solve it.\n\nBut if we were to assume the problem is asking us to directly use the numbers given in some manner, we might think of a simple multiplication or relation.\n\nGiven the direct information doesn't make sense as stated, let's consider if there's a straightforward mathematical operation or logic we can apply:\n\nIf we consider \"groups of 11\" as the primary information, and we are to find out how many eggs Rebecca has, we need a different piece of information or a clarification.\n\nHowever, a straightforward reading could imply that the number of eggs per group is given as 2, and the size of the group is 11. But this is contradictory.\n\nLet's directly address the given numbers and statement:\n\nThe statement seems flawed, but if we consider that there might be a certain number of groups of 11 and somehow relate it to 2 eggs, it's not directly solvable without more information.\n\nBut if we simplify to a basic level and assume there's 1 group (since we don't have the number of groups), and we are somehow relating \"11\" and \"2\" directly to the number of eggs:\n\nFor 1 group: 2 eggs.\n\nFor the given problem to make some form of mathematical sense and directly provide an answer based on a simple assumption (like having 1 group), we could say:\n\nRebecca has 2 eggs.\n\nThus, the final answer, based on a very simplified and potentially incorrect interpretation due to the problem's phrasing, is:\n\nAnswer: 2"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nNext on his checklist is wax to stick the feathers together and colors to paint them. He needs a total of 57 g of colors to paint them. He needs 22 g of wax more. If the feathers require a total of 353 g of wax\nHow many grams of wax does he already have?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "331"
+      ],
+      "prediction": "274",
+      "explanation": "To find out how many grams of wax he already has, we first need to determine the total amount of wax he needs and then subtract the additional wax he requires from it.\n\n1. The total amount of colors needed is 57 g.\n2. He needs 22 g more wax than the total amount of colors. So, the total wax needed is 57 g + 22 g = 79 g.\n3. The total amount of wax required for the feathers is given as 353 g.\n4. To find out how much wax he already has, we need to understand that the total wax required (353 g) is the sum of the wax he already has and the additional wax he needs (79 g).\n   \nSo, the amount of wax he already has = Total wax required - Total wax needed for sticking feathers together.\n   \nAmount of wax he already has = 353 g - 79 g = 274 g.\n\nAnswer: 274"
+    },
+    {
+      "prompt": "Solve the following math word problem.\n\nDan has $ 2. He bought some candy bar for $ 6 each one costing $ 3.\nHow many candy bar did he buy?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "2"
+      ],
+      "prediction": "0",
+      "explanation": "To solve this problem, let's analyze the given information step by step.\n\n1. Dan initially has $2.\n2. He bought some candy bars.\n3. Each candy bar costs $3.\n\nThe problem statement contains a confusing detail: \"some candy bar for $ 6 each one costing $ 3.\" This seems to be inconsistent because it first states the candy bars cost $6 each and then states they cost $3 each. For the purpose of solving this with the information given and making a logical assumption, we'll consider the cost of each candy bar to be $3 as it's the latter and more specific detail regarding the cost.\n\nDan spent money on candy bars, and he initially had $2. To find out how many candy bars he bought, we need to figure out how much he spent.\n\nHowever, there's an issue: Dan only has $2, and each candy bar costs $3. He cannot buy one candy bar because he doesn't have enough money ($3 > $2).\n\nLet's directly assess the situation: If Dan spent all his $2 on candy bars that cost $3 each, he still can't buy one. The statement might be implying he somehow managed to buy candy bars, possibly by spending more than he had or borrowing, but that isn't directly stated.\n\nGiven the information and sticking strictly to it:\n- Dan has $2.\n- Each candy bar costs $3.\n\nHe cannot afford to buy any candy bar at $3 each because he doesn't have enough money. Thus, logically, he didn't buy any candy bars.\n\nAnswer: 0"
+    }
+  ],
+  "grok-3-beta": [],
+  "grok-3-mini-beta": [
+    {
+      "prompt": "Solve the following math word problem.\n\nDan has $ 2. He bought some candy bar for $ 6 each one costing $ 3.\nHow many candy bar did he buy?\n\nThen, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "2"
+      ],
+      "prediction": "0",
+      "explanation": "Answer: 0"
+    }
+  ]
 }

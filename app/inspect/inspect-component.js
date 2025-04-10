@@ -59,7 +59,11 @@ function InspectPageContents() {
         'Qwen2.5-Max',
         'claude-3-7-sonnet-20250219',
         'claude-3-7-sonnet-20250219-thinking',
-        'gpt-4.5-preview-2025-02-27'
+        'gpt-4.5-preview-2025-02-27',
+        'gemini-2.5-pro-exp-03-25',
+        'meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8',
+        'grok-3-beta',
+        'grok-3-mini-beta',
     ]
     const model_names_gsm8k_platinum = [
       'meta-llama/Meta-Llama-3.1-405B-Instruct',
