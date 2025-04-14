@@ -64,6 +64,7 @@ function InspectPageContents() {
         'meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8',
         'grok-3-beta',
         'grok-3-mini-beta',
+        'gpt-4.1-2025-04-14',
     ]
     const model_names_gsm8k_platinum = [
       'meta-llama/Meta-Llama-3.1-405B-Instruct',
@@ -107,7 +108,7 @@ function InspectPageContents() {
         // console.log("dataset", dataset);
 
         if (model == null || model == 'null' || dataset == null || dataset == 'null') {
-            const newModel = (model == null || model == 'null') ? "o1-mini" : model;
+            const newModel = (model == null || model == 'null') ? "gpt-4.1-2025-04-14" : model;
             const newDataset = (dataset == null || dataset == 'null') ? "math_eval__multiarith" : dataset;
             // console.log("No model or dataset provided");
             const newRoute = `${pathname}?model=${newModel}&dataset=${newDataset}`;

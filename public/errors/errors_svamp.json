@@ -897,5 +897,15 @@
       "prediction": "0",
       "explanation": "Answer: 0"
     }
+  ],
+  "gpt-4.1-2025-04-14": [
+    {
+      "prompt": "Solve the following math word problem.\n\nAllan brought 5 balloons and Jake brought 6 balloons to the park. Jake then bought 3 more balloons at the park.\nHow many balloons did Jake bring to the park?\n\nThink step-by-step. Then, provide the final answer as a single integer in the format \"Answer: XXX\" with no extra formatting.",
+      "platinum_target": [
+        "6"
+      ],
+      "prediction": "9",
+      "explanation": "Let's break down the problem step-by-step:\n\n1. Jake initially brought 6 balloons to the park.\n2. At the park, Jake bought 3 more balloons.\n3. To find the total number of balloons Jake brought to the park, add the initial balloons and the additional balloons he bought at the park: 6 + 3 = 9.\n\nAnswer: 9"
+    }
   ]
 }

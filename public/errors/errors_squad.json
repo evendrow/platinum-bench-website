@@ -1029,16 +1029,6 @@
       "explanation": "Answer: Metamorphosed and deformed"
     },
     {
-      "prompt": "Answer the question using the information in the paragraph.\n\nThe historical measure of a steam engine's energy efficiency was its \"duty\". The concept of duty was first introduced by Watt in order to illustrate how much more efficient his engines were over the earlier Newcomen designs. Duty is the number of foot-pounds of work delivered by burning one bushel (94 pounds) of coal. The best examples of Newcomen designs had a duty of about 7 million, but most were closer to 5 million. Watt's original low-pressure designs were able to deliver duty as high as 25 million, but averaged about 17. This was a three-fold improvement over the average Newcomen design. Early Watt engines equipped with high-pressure steam improved this to 65 million.\n\nQuestion: How was the efficiency of a steam engine typically evaluated?\n\nProvide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
-      "platinum_target": [
-        "duty",
-        "by its duty",
-        "by duty"
-      ],
-      "prediction": "using duty the foot-pounds of work per bushel of coal burned",
-      "explanation": "Answer: Using \"duty,\" the foot-pounds of work per bushel of coal burned"
-    },
-    {
       "prompt": "Answer the question using the information in the paragraph.\n\nBaran developed the concept of distributed adaptive message block switching during his research at the RAND Corporation for the US Air Force into survivable communications networks, first presented to the Air Force in the summer of 1961 as briefing B-265, later published as RAND report P-2626 in 1962, and finally in report RM 3420 in 1964. Report P-2626 described a general architecture for a large-scale, distributed, survivable communications network. The work focuses on three key ideas: use of a decentralized network with multiple paths between any two points, dividing user messages into message blocks, later called packets, and delivery of these messages by store and forward switching.\n\nQuestion: How were messages delivered before implementation? \n\nProvide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
       "platinum_target": [
         "n/a"
@@ -2418,6 +2408,58 @@
       ],
       "prediction": "environmental protection",
       "explanation": "Answer: Environmental protection"
+    }
+  ],
+  "gpt-4.1-2025-04-14": [
+    {
+      "prompt": "Answer the question using the information in the paragraph.\n\nEventually, the Normans merged with the natives, combining languages and traditions. In the course of the Hundred Years' War, the Norman aristocracy often identified themselves as English. The Anglo-Norman language became distinct from the Latin language, something that was the subject of some humour by Geoffrey Chaucer. The Anglo-Norman language was eventually absorbed into the Anglo-Saxon language of their subjects (see Old English) and influenced it, helping (along with the Norse language of the earlier Anglo-Norse settlers and the Latin used by the church) in the development of Middle English. It in turn evolved into Modern English.\n\nQuestion: Who made fun of the Latin language?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
+      "platinum_target": [
+        "n/a"
+      ],
+      "prediction": "geoffrey chaucer",
+      "explanation": "Step-by-step reasoning:\n1. The paragraph discusses the merging of the Normans with the natives, language evolution, and mentions some humour about the Anglo-Norman language being distinct from Latin.\n2. It specifically says: \"something that was the subject of some humour by Geoffrey Chaucer.\"\n3. The question is: Who made fun of the Latin language?\n4. The paragraph states that Geoffrey Chaucer made fun of the distinction between Anglo-Norman and Latin, implying he made fun of the Latin language.\n\nAnswer: Geoffrey Chaucer"
+    },
+    {
+      "prompt": "Answer the question using the information in the paragraph.\n\nBefore the foundation can be dug, contractors are typically required to verify and have existing utility lines marked, either by the utilities themselves or through a company specializing in such services. This lessens the likelihood of damage to the existing electrical, water, sewage, phone, and cable facilities, which could cause outages and potentially hazardous situations. During the construction of a building, the municipal building inspector inspects the building periodically to ensure that the construction adheres to the approved plans and the local building code. Once construction is complete and a final inspection has been passed, an occupancy permit may be issued.\n\nQuestion: What does digging a foundation prevent damage to?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
+      "platinum_target": [
+        "n/a"
+      ],
+      "prediction": "existing utility lines (electrical water sewage phone and cable)",
+      "explanation": "Step-by-step reasoning:\n- The paragraph mentions that before the foundation can be dug, contractors must verify and have existing utility lines marked.\n- This process lessens the likelihood of damage to certain facilities.\n- The facilities listed are electrical, water, sewage, phone, and cable.\n- Therefore, digging a foundation (after marking utilities) helps prevent damage to these utility lines.\n\nAnswer: existing utility lines (electrical, water, sewage, phone, and cable)"
+    },
+    {
+      "prompt": "Answer the question using the information in the paragraph.\n\nOxygen is a chemical element with symbol O and atomic number 8. It is a member of the chalcogen group on the periodic table and is a highly reactive nonmetal and oxidizing agent that readily forms compounds (notably oxides) with most elements. By mass, oxygen is the third-most abundant element in the universe, after hydrogen and helium. At standard temperature and pressure, two atoms of the element bind to form dioxygen, a colorless and odorless diatomic gas with the formula O\n2. Diatomic oxygen gas constitutes 20.8% of the Earth's atmosphere. However, monitoring of atmospheric oxygen levels show a global downward trend, because of fossil-fuel burning. Oxygen is the most abundant element by mass in the Earth's crust as part of oxide compounds such as silicon dioxide, making up almost half of the crust's mass.\n\nQuestion: What is the most abundant element in the universe followed by hydrogen and helium?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
+      "platinum_target": [
+        "n/a"
+      ],
+      "prediction": "oxygen",
+      "explanation": "Step-by-step reasoning:\n1. The question asks for the most abundant element in the universe after hydrogen and helium.\n2. The paragraph states: \"By mass, oxygen is the third-most abundant element in the universe, after hydrogen and helium.\"\n3. This means that after hydrogen and helium, oxygen is the next most abundant.\n\nAnswer: Oxygen"
+    },
+    {
+      "prompt": "Answer the question using the information in the paragraph.\n\nSome theories developed in the 1970s established possible avenues through which inequality may have a positive effect on economic development. According to a 1955 review, savings by the wealthy, if these increase with inequality, were thought to offset reduced consumer demand. A 2013 report on Nigeria suggests that growth has risen with increased income inequality. Some theories popular from the 1950s to 2011 incorrectly stated that inequality had a positive effect on economic development. Analyses based on comparing yearly equality figures to yearly growth rates were misleading because it takes several years for effects to manifest as changes to economic growth. IMF economists found a strong association between lower levels of inequality in developing countries and sustained periods of economic growth. Developing countries with high inequality have \"succeeded in initiating growth at high rates for a few years\" but \"longer growth spells are robustly associated with more equality in the income distribution.\"\n\nQuestion: According to a 1954 review, what were savings by the wealthy thought to offset?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
+      "platinum_target": [
+        "n/a"
+      ],
+      "prediction": "reduced consumer demand",
+      "explanation": "Step-by-step reasoning:\n- The question asks about a 1954 review and what savings by the wealthy were thought to offset.\n- The paragraph mentions a \"1955 review,\" not a 1954 review.\n- According to the paragraph: \"According to a 1955 review, savings by the wealthy, if these increase with inequality, were thought to offset reduced consumer demand.\"\n- The information about what savings by the wealthy were thought to offset is present, but the year is 1955, not 1954.\n\nFinal answer: reduced consumer demand\n\nAnswer: reduced consumer demand"
+    },
+    {
+      "prompt": "Answer the question using the information in the paragraph.\n\nOxygen gas can also be produced through electrolysis of water into molecular oxygen and hydrogen. DC electricity must be used: if AC is used, the gases in each limb consist of hydrogen and oxygen in the explosive ratio 2:1. Contrary to popular belief, the 2:1 ratio observed in the DC electrolysis of acidified water does not prove that the empirical formula of water is H2O unless certain assumptions are made about the molecular formulae of hydrogen and oxygen themselves. A similar method is the electrocatalytic O\n2 evolution from oxides and oxoacids. Chemical catalysts can be used as well, such as in chemical oxygen generators or oxygen candles that are used as part of the life-support equipment on submarines, and are still part of standard equipment on commercial airliners in case of depressurization emergencies. Another air separation technology involves forcing air to dissolve through ceramic membranes based on zirconium dioxide by either high pressure or an electric current, to produce nearly pure O\n2 gas.\n\nQuestion: What do oxoacids evolve from?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
+      "platinum_target": [
+        "n/a"
+      ],
+      "prediction": "oxoacids",
+      "explanation": "Step-by-step reasoning:\n- The paragraph mentions \"electrocatalytic O2 evolution from oxides and oxoacids.\"\n- The phrase \"O2 evolution from oxides and oxoacids\" suggests that oxygen gas (O2) can be evolved (produced) from oxides and oxoacids via electrocatalytic methods.\n\nFinal answer:\nAnswer: oxoacids"
+    },
+    {
+      "prompt": "Answer the question using the information in the paragraph.\n\nFrom the late 1340s onwards, people in the countryside suffered from frequent natural disasters such as droughts, floods and the resulting famines, and the government's lack of effective policy led to a loss of popular support. In 1351, the Red Turban Rebellion started and grew into a nationwide uprising. In 1354, when Toghtogha led a large army to crush the Red Turban rebels, Toghun Tem\u00fcr suddenly dismissed him for fear of betrayal. This resulted in Toghun Tem\u00fcr's restoration of power on the one hand and a rapid weakening of the central government on the other. He had no choice but to rely on local warlords' military power, and gradually lost his interest in politics and ceased to intervene in political struggles. He fled north to Shangdu from Khanbaliq (present-day Beijing) in 1368 after the approach of the forces of the M\u00edng dynasty (1368\u20131644), founded by Zhu Yuanzhang in the south. He had tried to regain Khanbaliq, which eventually failed; he died in Yingchang (located in present-day Inner Mongolia) two years later (1370). Yingchang was seized by the Ming shortly after his death. Some royal family members still lived in Henan today.\n\nQuestion:  When was the Ming dynasty out of power?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word. If the question is unanswerable from the context, the final answer should be: \"Answer: N/A\".",
+      "platinum_target": [
+        "1644",
+        "after 1644",
+        "before 1368 and after 1644"
+      ],
+      "prediction": "n/a",
+      "explanation": "Step-by-step reasoning:\n- The paragraph discusses the decline of the Yuan dynasty and the rise of the Ming dynasty.\n- It mentions that the Ming dynasty was founded in 1368 by Zhu Yuanzhang.\n- The paragraph does not mention when the Ming dynasty ended or was out of power.\n- The question asks \"When was the Ming dynasty out of power?\" which refers to the end of the Ming dynasty's rule.\n- There is no information provided about the end of the Ming dynasty in the paragraph.\n\nAnswer: N/A"
     }
   ]
 }

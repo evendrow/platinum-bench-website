@@ -930,5 +930,6 @@
       "prediction": "1",
       "explanation": "The statement mentions \"slowest lap,\" but the table only provides data for \"fastest lap.\" Assuming \"slowest lap\" is a typo and the intended meaning is \"fastest lap,\" the driver in pole position also had the fastest lap in exactly 5 rounds (rounds 1, 2, 5, 6, and 16). Thus, the statement is entailed by the table.\n\nAnswer: 1"
     }
-  ]
+  ],
+  "gpt-4.1-2025-04-14": []
 }

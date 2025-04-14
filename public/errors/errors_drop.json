@@ -2009,5 +2009,49 @@
       "prediction": "3",
       "explanation": "Answer: 3"
     }
+  ],
+  "gpt-4.1-2025-04-14": [
+    {
+      "prompt": "Answer the question using the information in the context.\n\nContext: Quarterback Brett Favre had another Pro Bowl season and became the first player ever to win the National Football League Most Valuable Player Award award three times, winning it for the third consecutive year (Favre was named co-MVP in 1997 with Detroit Lions running back Barry Sanders). Favre led the league with 35 passing touchdowns and completed 304 out of 513 attempts for 3,867 yards, with 16 interceptions, while ranking second on the team in rushing with 187 yards and a touchdown. Wide receiver Antonio Freeman led the team in receptions with 81 catches for 1,243 yards and 12 touchdowns. Wide receiver Robert Brooks was also a major deep threat, catching 60 passes for 1,010 yards and 7 touchdowns. Pro Bowl tight end Mark Chmura recorded 38 receptions for 417 yards and 6 touchdowns. Pro Bowl running back Dorsey Levens led the team in rushing with 1,435 yards and 7 touchdowns, while also catching 53 passes for 373 yards and 5 touchdowns. Fullback William Henderson (American football) rushed for 113 yards and caught 41 passes for 367 yards and a touchdown.\n\nQuestion: How many yards long, to two decimal places, were Brett Favre's completions on average?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word.",
+      "platinum_target": [
+        "1272",
+        "1272 yards",
+        "1272 yards long"
+      ],
+      "prediction": "1273 yards",
+      "explanation": "Let's break down the question step-by-step:\n\n1. We are asked for Brett Favre's average yards per completion.\n2. The total passing yards is given: 3,867 yards.\n3. The total completions is given: 304 completions.\n\nTo find the average yards per completion, divide the total passing yards by the number of completions:\n\n\\[\n\\text{Average yards per completion} = \\frac{3,867 \\text{ yards}}{304 \\text{ completions}}\n\\]\n\nNow, perform the division:\n\n\\[\n\\frac{3,867}{304} = 12.727\n\\]\n\nRounding to two decimal places:\n\n\\[\n12.73\n\\]\n\nSo,\n\nAnswer: 12.73 yards"
+    },
+    {
+      "prompt": "Answer the question using the information in the context.\n\nContext: After a miserable loss to the Atlanta Falcons, the Dolphins host their home opener to the Indianapolis Colts. On the first play from scrimmage, Peyton Manning threw an 80-yard touchdown pass to tight end Dallas Clark. The Dolphins answered with a 14-yard touchdown run by Ronnie Brown out of the Wildcat Offense. The Dolphins and Colts kept going back and forth at each other with two field goals by Dan Carpenter and Adam Vinatieri to make the score 13-13 at halftime. After a scoreless third quarter, Ronnie Brown ran 2-yards for a touchdown to put Miami up 20-13. The Colts answered back with a 15-yard touchdown run by rookie running back Donald Brown. Miami than hit a 45-yard field goal by Dan Carpenter. But the Colts took the lead thanks to a 48-yard touchdown pass to Pierre Gar&#231;on. The Dolphins tried to rally at the end of the game but Chad Pennington was intercepted by Antoine Bethea to sucure the Colts victory. The Colts won the game 27-23 as the Dolphins dropped to 0-2. The Dolphins dominated the game in the time of possession battle, but lost the game with almost 50 minutes of offensive possession.\n\nQuestion: How many field goals were made?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word.",
+      "platinum_target": [
+        "5",
+        "5 field goals",
+        "five",
+        "five field goals"
+      ],
+      "prediction": "3 field goals",
+      "explanation": "Let's break down the scoring events mentioned in the context:\n\n1. Peyton Manning threw an 80-yard touchdown pass to Dallas Clark (Colts TD).\n2. Ronnie Brown had a 14-yard touchdown run (Dolphins TD).\n3. Two field goals: one by Dan Carpenter (Dolphins), one by Adam Vinatieri (Colts).\n4. Halftime score: 13-13.\n5. After a scoreless third quarter, Ronnie Brown ran 2-yards for a touchdown (Dolphins TD).\n6. Donald Brown had a 15-yard touchdown run (Colts TD).\n7. Miami hit a 45-yard field goal by Dan Carpenter (Dolphins FG).\n8. Colts scored a 48-yard touchdown pass to Pierre Gar\u00e7on (Colts TD).\n\nNow, let's count the field goals:\n\n- First half: Two field goals (one by each team).\n- Second half: One 45-yard field goal by Dan Carpenter.\n\nTotal field goals made: 3.\n\nAnswer: 3 field goals"
+    },
+    {
+      "prompt": "Answer the question using the information in the context.\n\nContext: Skopje, as the Republic of Macedonia as a whole, is characterised by a large ethnic diversity. The city is located in a region where Ethnic Albanians and Macedonians meet, and it welcomed Romani, Turks, Jews and Serbs throughout its history. Skopje was mainly a Muslim city until the 19th century, when large numbers of Christians started to settle there. According to the 2002 census, Macedonians were the largest ethnic group in Skopje, with 338,358 inhabitants, or 66.75% of the population. Then came Albanians with 103,891 inhabitants (20.49%), Roma people with 23,475 (4.63%), Serbs (14,298 inhabitants), Turks (8,595), Bosniaks (7,585) and Vlachs (2,557). 8,167 people did not belong to any of these groups.\n\nQuestion: How many in percent from the census in Skopje weren't Roma?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word.",
+      "platinum_target": [
+        "9537",
+        "9537%",
+        "9537 percent"
+      ],
+      "prediction": "9539%",
+      "explanation": "Let's break it down step-by-step:\n\n1. According to the context, the total population in the 2002 census is the sum of all the listed groups:\n   - Macedonians: 338,358\n   - Albanians: 103,891\n   - Roma: 23,475\n   - Serbs: 14,298\n   - Turks: 8,595\n   - Bosniaks: 7,585\n   - Vlachs: 2,557\n   - Others: 8,167\n\n2. Calculate the total population:\n   338,358 + 103,891 + 23,475 + 14,298 + 8,595 + 7,585 + 2,557 + 8,167 = 507,926\n\n3. The number of people who are not Roma:\n   Total population - Roma population = 507,926 - 23,475 = 484,451\n\n4. Calculate the percentage of people who are not Roma:\n   (484,451 / 507,926) \u00d7 100 \u2248 95.39%\n\nAnswer: 95.39%"
+    },
+    {
+      "prompt": "Answer the question using the information in the context.\n\nContext: The Mavericks finished 49-33, one game ahead of Phoenix for the eighth and final playoff spot, which meant that they would once again have to face their in-state rivals, the San Antonio Spurs, who were the top seed in the Western Conference with a 62-20 record. In Game 1 in San Antonio, Dallas had an 81-71 lead in the fourth quarter, but the Spurs rallied back and took Game 1, 85-90. However, the Mavs forced 22 turnovers in Game 2 to rout the Spurs 113-92, splitting the first two games before the series went to Dallas. In Game 3, Manu Gin\u00f3bili hit a shot that put the Spurs up 108-106 with 1.7 seconds left, but a buzzer-beater by Vince Carter gave the Mavs the victory, putting them up 2-1 in the series. The Spurs took Game 4 in Dallas 93-89 despite a late Dallas comeback after the Spurs at one point had a 20-point lead and later won Game 5 at home, 109-103, giving them a 3-2 series lead. The Mavs avoided elimination in Game 6 at home by rallying in the fourth quarter, winning 111-113. Game 7 was on the Spurs home court, and the Spurs beat the Mavericks 119-96, putting an end to the Mavericks season.\n\nQuestion: How many more points were scored by both teams combined in game 6 compared to game 1?\n\nThink step-by-step. Then, provide the final answer in the format: \"Answer: XXX\", where XXX should be just a short phrase or word.",
+      "platinum_target": [
+        "49",
+        "49 points",
+        "49 more points",
+        "49 points more"
+      ],
+      "prediction": "53 points",
+      "explanation": "Let's break down the scores:\n\nGame 1:  \n- Mavericks: 81  \n- Spurs: 90  \n- Combined: 81 + 90 = 171\n\nGame 6:  \n- Mavericks: 113  \n- Spurs: 111  \n- Combined: 113 + 111 = 224\n\nNow, subtract the combined score of Game 1 from Game 6:  \n224 - 171 = 53\n\nAnswer: 53 points"
+    }
   ]
 }
