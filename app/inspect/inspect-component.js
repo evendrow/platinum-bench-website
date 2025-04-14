@@ -108,7 +108,7 @@ function InspectPageContents() {
         // console.log("dataset", dataset);
 
         if (model == null || model == 'null' || dataset == null || dataset == 'null') {
-            const newModel = (model == null || model == 'null') ? "gpt-4.1-2025-04-14" : model;
+            const newModel = (model == null || model == 'null') ? "deepseek-r1" : model;
             const newDataset = (dataset == null || dataset == 'null') ? "math_eval__multiarith" : dataset;
             // console.log("No model or dataset provided");
             const newRoute = `${pathname}?model=${newModel}&dataset=${newDataset}`;
